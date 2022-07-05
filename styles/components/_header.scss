@@ -1,0 +1,42 @@
+header {
+    z-index: 999;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    display: flex;
+    height: 128px;
+    width: 100vw;
+    nav {
+        z-index: 5;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 32px;
+            width: 127.2px;
+            height: 32px;
+
+            .logoSymbol {
+                width: 32px;
+                height: 32px;
+            }
+
+            .logoTxt {
+                width: 66.4px;
+                height: 23.87px;
+                margin-right: 16px;
+            }
+        }
+
+        .burger-menu {
+            width: 32px;
+            height: 12px;
+            margin-right: 32px;
+        }
+    }
+}

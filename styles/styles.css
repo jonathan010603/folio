@@ -6,94 +6,77 @@
   font-family: "SF Pro Text";
   src: url("../fonts/SF_Pro_display/sf-pro-text-regular.ttf");
 }
-html, body {
-  margin: 0;
-  font-family: "SF Pro Display";
-  padding: 0.5rem;
-}
-
 header {
-  position: fixed;
+  z-index: 999;
+  background-color: white;
   top: 0;
+  position: fixed;
   display: flex;
-  align-items: center;
   height: 128px;
-  width: 100%;
+  width: 100vw;
 }
 header nav {
-  width: 90%;
+  z-index: 5;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header nav .logo-div {
   display: flex;
-  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 32px;
+  width: 127.2px;
+  height: 32px;
 }
 header nav .logo-div .logoSymbol {
-  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+}
+header nav .logo-div .logoTxt {
+  width: 66.4px;
+  height: 23.87px;
+  margin-right: 16px;
+}
+header nav .burger-menu {
+  width: 32px;
+  height: 12px;
+  margin-right: 32px;
 }
 
-main {
-  margin-top: 100px;
-}
-main section {
-  margin-bottom: 1em;
-}
-main section article {
+.hero-article .Container-div {
+  z-index: 4;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 80vh;
-  margin-bottom: 3rem;
+  justify-content: space-between;
+  width: 311px;
+  height: 356px;
 }
-main section article h1 {
+.hero-article .Container-div .typography-div {
+  height: 276px;
+}
+.hero-article .Container-div .typography-div .Title-h1 {
   margin: 0;
-  text-align: left;
-}
-main section .hero-article .Container-div .Title-h1 {
-  z-index: 999;
+  height: 168px;
+  left: 0%;
+  right: 0%;
   font-family: "SF Pro Display";
-  color: #232340;
-  width: 60%;
-  font-size: 3rem;
   font-weight: 700;
+  font-size: 48px;
   line-height: 56px;
   letter-spacing: -0.5px;
+  color: #232340;
+  margin-bottom: 24px;
 }
-main section .hero-article .Container-div .Text-p {
+.hero-article .Container-div .typography-div .Text-p {
   font-family: "SF Pro Display";
-  color: #606060;
-  width: 75%;
-  font-size: 1rem;
   font-weight: 400;
+  font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0px;
-  text-align: left;
+  color: #606060;
 }
-main section .hero-article .Container-div .images {
-  position: absolute;
-}
-main section .hero-article .Container-div .images img {
-  position: absolute;
-}
-main section .hero-article .Container-div .images .heroPath-img {
-  z-index: 1;
-  width: 456.68px;
-  top: -60vh;
-  height: 80vh;
-}
-main section .hero-article .Container-div .images .heroBg-img {
-  z-index: 2;
-  top: -5vh;
-  left: 35vw;
-  height: 47.6vh;
-}
-main section .hero-article .Container-div .images .heroGraphic-img {
-  z-index: 3;
-  left: -1vh;
-  top: -20vh;
-}
-main section .hero-article .recentWork-btn {
+.hero-article .Container-div .recentWork-btn {
   background-color: #5468E7;
   border: none;
   border-radius: 8px;
@@ -106,16 +89,144 @@ main section .hero-article .recentWork-btn {
   letter-spacing: 0px;
   text-align: center;
 }
-main .whatWeDo-article .Container-div .pageIndicator-span {
+.hero-article img {
+  position: absolute;
+  overflow: hidden;
+}
+.hero-article .heroPath-img {
+  z-index: 1;
+  width: 456.68px;
+  height: 582.58px;
+  margin-left: 176px;
+  top: -15.31px;
+}
+.hero-article .heroBg-img {
+  z-index: 2;
+  width: 287px;
+  height: 363.51px;
+  margin-left: 155px;
+  top: 448.77px;
+}
+.hero-article .heroGraphic-img {
+  z-index: 3;
+  width: 725px;
+  height: 515.56px;
+  margin-left: -217px;
+  top: 337px;
+}
+
+.whatWeDo-article {
+  height: 1216px;
+}
+.whatWeDo-article .Container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 227px;
+  height: 304px;
+}
+.whatWeDo-article .Container-div .text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+}
+.whatWeDo-article .Container-div .text-div .pageIndicator-span {
   color: #5468E7;
 }
-main .whatWeDo-article .Container-div .Title-h1 {
-  z-index: 999;
+.whatWeDo-article .Container-div .text-div .Title-h1 {
+  margin: 0;
+  width: 227px;
+  height: 192px;
   font-family: "SF Pro Display";
-  color: #232340;
-  width: 60%;
-  font-size: 3rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 56px;
-  letter-spacing: -0.5px;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.4px;
+  color: #232340;
+}
+.whatWeDo-article .Container-div .arrow-span {
+  margin-top: 24px;
+  display: flex;
+  justify-content: right;
+  width: 108px;
+  height: 46px;
+}
+.whatWeDo-article .Container-div .arrow-span img {
+  width: 46px;
+  height: 46px;
+}
+.whatWeDo-article .serviceCard-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  width: 311px;
+  height: 856px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5468E7;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div {
+  display: flex;
+  align-items: flex-start;
+  width: 311px;
+  height: 214px;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div {
+  display: flex;
+  align-items: center;
+  border-radius: 32px;
+  width: 311px;
+  height: 190px;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
+  background-color: #5468E7;
+  color: white;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
+  margin-left: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 185px;
+  height: 91.02px;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
+  width: 91.02px;
+  height: 91.02px;
+  margin-right: 24px;
+}
+.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
+  text-align: left;
+  height: 24px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Display";
+}
+
+main {
+  margin-left: 32px;
+}
+main section {
+  margin-top: 128px;
+}
+main section article {
+  display: flex;
+  flex-direction: column;
+}
+main .hero-section {
+  height: 684px;
+}
+main .services-section {
+  height: 2291px;
 }/*# sourceMappingURL=styles.css.map */

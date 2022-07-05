@@ -1,0 +1,103 @@
+.whatWeDo-article {
+    height: 1216px;
+    .Container-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 227px;
+        height: 304px;
+
+        .text-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 234px;
+
+            .pageIndicator-span {
+                color: #5468E7;
+            }
+    
+            .Title-h1 {
+                margin: 0;
+                width: 227px;
+                height: 192px;
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                letter-spacing: -0.4px;
+                color: #232340;
+            }
+        }
+
+        .arrow-span {
+            margin-top: 24px;
+            display: flex;
+            justify-content: right;
+            width: 108px;
+            height: 46px;
+
+            img {
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+
+    .serviceCard-div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 56px;
+        width: 311px;
+        height: 856px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #5468E7;
+        .serviceContainer-div {
+            display: flex;
+            align-items: flex-start;
+            width: 311px;
+            height: 214px;
+
+            .serviceBG-div {
+                display: flex;
+                align-items: center;
+                border-radius: 32px;
+                width: 311px;
+                height: 190px;
+
+                &:hover {
+                    background-color: #5468E7;
+                    color: white;
+                }
+
+                .service-div {
+                    margin-left: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    width: 185px;
+                    height: 91.02px;
+                    img {
+                        width: 91.02px;
+                        height: 91.02px;
+                        margin-right: 24px;
+                    }
+
+                    .serviceText-span {
+                        text-align: left;
+                        height: 24px;
+                        font-family: 'SF Pro Display';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
