@@ -1,5 +1,10 @@
 @font-face {
     font-family: 'SF Pro Display';
+    src: url('../fonts/SF_Pro_display/SF-Pro-Display-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SF Pro Display Regular';
     src: url('../fonts/SF_Pro_display/SF-Pro-Display-Regular.ttf');
 }
     
@@ -11,6 +16,7 @@
 @import './components/_header.scss';
 @import './components/_hero.scss';
 @import './components/_whatWeDo.scss';
+@import './components/_achievement.scss';
 
 body {
     margin: 0;
@@ -18,13 +24,13 @@ body {
 }
 
 main {
-    margin-left: 32px;
 
     section {
 
         margin-top: 128px;
 
         article {
+            margin-left: 32px;
             display: flex;
             flex-direction: column;
         }
@@ -35,6 +41,6 @@ main {
     }
 
     .services-section {
-        height: 2291px;
+        height: 1691px;
     }
 }

@@ -1,5 +1,9 @@
 @font-face {
   font-family: "SF Pro Display";
+  src: url("../fonts/SF_Pro_display/SF-Pro-Display-Bold.ttf");
+}
+@font-face {
+  font-family: "SF Pro Display Regular";
   src: url("../fonts/SF_Pro_display/SF-Pro-Display-Regular.ttf");
 }
 @font-face {
@@ -59,9 +63,6 @@ header nav .burger-menu {
 .hero-article .Container-div .typography-div .Title-h1 {
   margin: 0;
   height: 168px;
-  left: 0%;
-  right: 0%;
-  font-family: "SF Pro Display";
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
@@ -70,7 +71,7 @@ header nav .burger-menu {
   margin-bottom: 24px;
 }
 .hero-article .Container-div .typography-div .Text-p {
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Display Regular";
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
@@ -83,7 +84,6 @@ header nav .burger-menu {
   width: 160px;
   height: 56px;
   color: white;
-  font-family: "SF Pro Display";
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0px;
@@ -132,14 +132,20 @@ header nav .burger-menu {
   height: 234px;
 }
 .whatWeDo-article .Container-div .text-div .pageIndicator-span {
+  font-family: "SF Pro Text";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
   color: #5468E7;
+  width: 131px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 .whatWeDo-article .Container-div .text-div .Title-h1 {
   margin: 0;
   width: 227px;
   height: 192px;
-  font-family: "SF Pro Display";
-  font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -180,6 +186,7 @@ header nav .burger-menu {
   border-radius: 32px;
   width: 311px;
   height: 190px;
+  transition: all ease-in-out 0.1s;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
   background-color: #5468E7;
@@ -201,12 +208,121 @@ header nav .burger-menu {
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
   text-align: left;
   height: 24px;
-  font-family: "SF Pro Display";
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   color: inherit;
+}
+
+.achievement-article {
+  margin-top: 56px;
+}
+.achievement-article .Container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 227px;
+  height: 399px;
+}
+.achievement-article .Container-div .text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 227;
+  height: 176px;
+}
+.achievement-article .Container-div .text-div .pageIndicator-span {
+  font-family: "SF Pro Text";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #232340;
+  width: 131px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.achievement-article .Container-div .text-div .pageIndicator-span .pageNum {
+  color: #8B8B8B;
+}
+.achievement-article .Container-div .text-div .Title-h1 {
+  width: 227px;
+  height: 128px;
+  left: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  color: #232340;
+}
+.achievement-article .Container-div .successfulProjects-div {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 194px;
+  height: 191px;
+}
+.achievement-article .Container-div .successfulProjects-div .number-span {
+  text-align: center;
+  width: 177px;
+  height: 167px;
+  font-weight: 600;
+  font-size: 140px;
+  line-height: 167px;
+  color: #5468E7;
+}
+.achievement-article .Container-div .successfulProjects-div .text-span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 195px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.pic_pagination-div {
+  margin-top: 20.23px;
+  width: 375px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pic_pagination-div .phone {
+  z-index: 3;
+  width: 375px;
+  height: 555px;
+}
+.pic_pagination-div .circle {
+  z-index: 2;
+  position: absolute;
+  margin-top: 104.77px;
+  background-color: #FFC7DF;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+}
+.pic_pagination-div .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 69px;
+  height: 12px;
+}
+.pic_pagination-div .pagination .point {
+  border-radius: 50%;
+  width: 5.69px;
+  height: 5.69px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.30171);
+  transition: all ease-in-out 0.1s;
+}
+.pic_pagination-div .pagination .point:hover {
+  background-color: #3A8FFF;
 }
 
 body {
@@ -214,13 +330,11 @@ body {
   font-family: "SF Pro Display";
 }
 
-main {
-  margin-left: 32px;
-}
 main section {
   margin-top: 128px;
 }
 main section article {
+  margin-left: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -228,5 +342,5 @@ main .hero-section {
   height: 684px;
 }
 main .services-section {
-  height: 2291px;
+  height: 1691px;
 }/*# sourceMappingURL=styles.css.map */

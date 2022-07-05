@@ -1,0 +1,124 @@
+.achievement-article {
+    margin-top: 56px;
+
+    .Container-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 227px;
+        height: 399px;
+
+        .text-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 227;
+            height: 176px;
+
+            .pageIndicator-span {
+                font-family: 'SF Pro Text';
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                color: #232340;
+                width: 131px;
+                height: 18px;
+                display: flex;
+                justify-content: space-between;
+                
+                .pageNum {
+                    color: #8B8B8B;
+                }
+            }
+    
+            .Title-h1 {
+                width: 227px;
+                height: 128px;
+                left: 32px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: -0.2px;
+                color: #232340;
+            }
+        }
+
+        .successfulProjects-div {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 194px;
+            height: 191px;
+
+            .number-span {
+                text-align: center;
+                width: 177px;
+                height: 167px;
+                font-weight: 600;
+                font-size: 140px;
+                line-height: 167px;
+                color: #5468E7;
+            }
+
+            .text-span {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 195px;
+                height: 24px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                color: #000000;
+            }
+        }
+    }
+
+}
+
+.pic_pagination-div {
+    margin-top: 20.23px;
+    width: 375px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .phone {
+        z-index: 3;
+        width: 375px;
+        height: 555px;
+    }
+
+    .circle {
+        z-index: 2;
+        position: absolute;
+        margin-top: 104.77px;
+        background-color: #FFC7DF;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+    }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 69px;
+        height: 12px;
+
+        .point {
+            border-radius: 50%;
+            width: 5.69px;
+            height: 5.69px;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.30171);
+            transition: all ease-in-out 0.1s;
+
+            &:hover {
+                background-color: #3A8FFF;
+            }
+        }
+    }
+}
