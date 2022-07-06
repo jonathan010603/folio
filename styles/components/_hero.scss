@@ -1,47 +1,40 @@
+@import '../abstract/_variables.scss';
+
 .hero-article {
 
     .Container-div {
+        @include sizeWH (311px, 356px);
+        @include column_spaceBetween;
         z-index: 4;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 311px;
-        height: 356px;
 
         .typography-div {
             height: 276px;
 
             .Title-h1 {
+                @include font_WeightSizeLineHeight (700, 48px, 56px);
+                color: $dark;
                 margin: 0;
                 height: 168px;
-                font-weight: 700;
-                font-size: 48px;
-                line-height: 56px;
                 letter-spacing: -0.5px;
-                color: #232340;
                 margin-bottom: 24px;
             }
     
             .Text-p {
-                font-family: 'SF Pro Display Regular';
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 28px;
-                color: #606060;
+                @include font_WeightSizeLineHeight (400, 16px, 28px);
+                font-family: $display_regular;
+                color: $body_light;
             }
         }
 
         .recentWork-btn {
-            background-color: #5468E7;
+            @include font_WeightSizeLineHeight (600, 16px, 22px);
+            @include sizeWH (160px, 56px);
+            color: white;
             border: none;
-            border-radius: 8px;
-            width: 160px;
-            height: 56px;
-            color: white;;
-            font-size: 16px;
-            line-height: 22px;
-            letter-spacing: 0px;
             text-align: center;
+            background-color: $primary;
+            border-radius: 8px;
+            letter-spacing: 0px;
         }
     }      
     img {
@@ -50,25 +43,22 @@
     }
 
     .heroPath-img {
+        @include sizeWH (456.68px, 582.58px);
         z-index: 1;
-        width: 456.68px;
-        height: 582.58px;
         margin-left: 176px;
         top: -15.31px;
     }
 
     .heroBg-img {
+        @include sizeWH (287px, 363.51px);
         z-index: 2;
-        width: 287px;
-        height: 363.51px;
         margin-left: 155px;
         top: 448.77px;
     }
 
     .heroGraphic-img {
+        @include sizeWH (725px, 515.56px);
         z-index: 3;
-        width: 725px;
-        height: 515.56px;
         margin-left: -217px;
         top: 337px;
     }

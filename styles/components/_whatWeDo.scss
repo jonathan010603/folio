@@ -1,106 +1,81 @@
+@import '../abstract/_variables.scss';
+
 .whatWeDo-article {
     height: 1216px;
+
     .Container-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 227px;
-        height: 304px;
+        @include column_spaceBetween;
+        @include sizeWH (227px, 304px);
 
         .text-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            @include column_spaceBetween;
             height: 234px;
 
             .pageIndicator-span {
-                font-family: 'SF Pro Text';
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 18px;
-                color: #5468E7;
-                width: 131px;
-                height: 18px;
-                display: flex;
-                justify-content: space-between;
+                @include row_spaceBetween;
+                @include pageIndicator;
+                color: $primary;
             }
     
             .Title-h1 {
+                @include font_WeightSizeLineHeight (700, 40px, 48px);
+                @include sizeWH (227px, 192px);
                 margin: 0;
-                width: 227px;
-                height: 192px;
-                font-weight: 700;
-                font-size: 40px;
-                line-height: 48px;
                 letter-spacing: -0.4px;
-                color: #232340;
+                color: $dark;
             }
         }
 
         .arrow-span {
-            margin-top: 24px;
+            @include sizeWH (108px, 46px);
             display: flex;
             justify-content: right;
-            width: 108px;
-            height: 46px;
+            margin-top: 24px;
 
             img {
-                width: 46px;
-                height: 46px;
+                @include sizeWH (46px, 46px);
             }
         }
     }
 
     .serviceCard-div {
+        @include font_WeightSizeLineHeight (600, 18px, 24px);
+        @include sizeWH (311px, 856px);
         display: flex;
         flex-direction: column;
         margin-top: 56px;
-        width: 311px;
-        height: 856px;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        color: #5468E7;
+        text-align: left;
+        color: $primary;
 
         .serviceContainer-div {
+            @include sizeWH (311px, 214px);
             display: flex;
             align-items: flex-start;
-            width: 311px;
-            height: 214px;
 
             .serviceBG-div {
-                display: flex;
-                align-items: center;
+                @include sizeWH (311px, 190px);
+                @include row_alignCenter;
                 border-radius: 32px;
-                width: 311px;
-                height: 190px;
                 transition: all ease-in-out 0.1s;
 
                 &:hover {
-                    background-color: #5468E7;
+                    background-color: $primary;
                     color: white;
                 }
 
                 .service-div {
-                    margin-left: 48px;
-                    display: flex;
-                    align-items: center;
+                    @include sizeWH (185px, 91.02px);
+                    @include row_alignCenter;
                     justify-content: left;
-                    width: 185px;
-                    height: 91.02px;
+                    margin-left: 48px;
 
                     img {
-                        width: 91.02px;
-                        height: 91.02px;
+                        @include sizeWH (91.02px, 91.02px);
                         margin-right: 24px;
                     }
 
                     .serviceText-span {
-                        text-align: left;
                         height: 24px;
-                        font-weight: 600;
-                        font-size: 18px;
-                        line-height: 24px;
                         color: inherit;
                     }
                 }

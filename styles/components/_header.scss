@@ -1,11 +1,12 @@
+@import '../abstract/_variables.scss';
+
 header {
+    @include sizeWH (100vw, 128px);
     z-index: 999;
     background-color: white;
     top: 0;
     position: fixed;
     display: flex;
-    height: 128px;
-    width: 100vw;
     nav {
         z-index: 5;
         width: 100%;
@@ -14,28 +15,24 @@ header {
         align-items: center;
 
         .logo-div {
+            @include sizeWH (127.2px, 32px);
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-left: 32px;
-            width: 127.2px;
-            height: 32px;
 
             .logoSymbol {
-                width: 32px;
-                height: 32px;
+                @include sizeWH (32px, 32px);
             }
 
             .logoTxt {
-                width: 66.4px;
-                height: 23.87px;
+                @include sizeWH (66.4px, 23.87px);
                 margin-right: 16px;
             }
         }
 
         .burger-menu {
-            width: 32px;
-            height: 12px;
+            @include sizeWH (32px, 12px);
             margin-right: 32px;
         }
     }

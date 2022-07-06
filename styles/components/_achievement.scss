@@ -1,76 +1,53 @@
+@import '../abstract/_variables.scss';
+
 .achievement-article {
     margin-top: 56px;
 
     .Container-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 227px;
-        height: 399px;
+        @include sizeWH (227px, 399px);
+        @include column_spaceBetween;
 
         .text-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 227;
-            height: 176px;
+            @include sizeWH (227px, 176px);
+            @include column_spaceBetween;
 
             .pageIndicator-span {
-                font-family: 'SF Pro Text';
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 18px;
-                color: #232340;
-                width: 131px;
-                height: 18px;
-                display: flex;
-                justify-content: space-between;
+                @include row_spaceBetween;
+                @include pageIndicator;
+                color: $dark;
                 
                 .pageNum {
-                    color: #8B8B8B;
+                    color: $body_dark;
                 }
             }
     
             .Title-h1 {
-                width: 227px;
-                height: 128px;
+                @include font_WeightSizeLineHeight (700, 24px, 32px);
+                @include sizeWH (227px, 128px);
                 left: 32px;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 32px;
                 letter-spacing: -0.2px;
-                color: #232340;
+                color: $dark;
             }
         }
 
         .successfulProjects-div {
+            @include sizeWH (194px, 191px);
+            @include column_spaceBetween;
             margin-top: 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 194px;
-            height: 191px;
 
             .number-span {
+                @include font_WeightSizeLineHeight (600, 140px, 167px);
+                @include sizeWH (177px, 167px);
                 text-align: center;
-                width: 177px;
-                height: 167px;
-                font-weight: 600;
-                font-size: 140px;
-                line-height: 167px;
-                color: #5468E7;
+                color: $primary;
             }
 
             .text-span {
-                display: flex;
+                @include font_WeightSizeLineHeight (600, 18px, 24px);
+                @include sizeWH (195px, 24px);
+                @include row_spaceBetween;
                 align-items: center;
-                justify-content: space-between;
-                width: 195px;
-                height: 24px;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 24px;
-                color: #000000;
+                color: black;
             }
         }
     }
@@ -78,46 +55,40 @@
 }
 
 .pic_pagination-div {
+    @include sizeWH (375px, 600px);
     margin-top: 20.23px;
-    width: 375px;
-    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .phone {
+        @include sizeWH (375px, 555px);
         z-index: 3;
-        width: 375px;
-        height: 555px;
     }
 
     .circle {
+        @include sizeWH (330px, 330px);
         z-index: 2;
         position: absolute;
         margin-top: 104.77px;
-        background-color: #FFC7DF;
-        width: 330px;
-        height: 330px;
+        background-color: $accent_1;
         border-radius: 50%;
     }
 
     .pagination {
+        @include sizeWH (69px, 12px);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 69px;
-        height: 12px;
 
         .point {
+            @include sizeWH (5.69px, 5.69px);
             border-radius: 50%;
-            width: 5.69px;
-            height: 5.69px;
             background: #FFFFFF;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.30171);
-            transition: all ease-in-out 0.1s;
 
             &:hover {
-                background-color: #3A8FFF;
+                background-image: $linear_gradient_blue;
             }
         }
     }

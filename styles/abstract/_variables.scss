@@ -1,0 +1,72 @@
+/* Fonts */
+$display_bold: 'SF Pro Display';
+$display_regular: 'SF Pro Display Regular';
+$display_text: 'SF Pro Text';
+
+
+
+/* Colors */
+$primary: #5468E7;
+$secondary: #C897E4;
+$dark: #232340;
+$body_light: #606060;
+$body_dark: #8B8B8B;
+
+$accent_1: #FFC7DF;
+$accent_2: #FFBA79;
+$accent_3: #9A97ED;
+$shade_1: #D1ECFD;
+$shade_2: #E8BEFF;
+$shade_6: #FFCE79;
+$shade_7: #908CFF;
+$linear_gradient_blue: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
+
+
+
+/* General mixins */
+@mixin sizeWH ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin font_WeightSizeLineHeight($weight, $size, $line_height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line_height;
+}
+
+@mixin pageIndicator {
+    font-family: $display_text;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    width: 131px;
+    height: 18px;
+}
+
+
+
+/* Flex mixins */
+@mixin column_spaceBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin row_spaceBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin row_alignCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin column_alignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

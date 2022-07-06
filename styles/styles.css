@@ -10,14 +10,22 @@
   font-family: "SF Pro Text";
   src: url("../fonts/SF_Pro_display/sf-pro-text-regular.ttf");
 }
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
 header {
+  width: 100vw;
+  height: 128px;
   z-index: 999;
   background-color: white;
   top: 0;
   position: fixed;
   display: flex;
-  height: 128px;
-  width: 100vw;
 }
 header nav {
   z-index: 5;
@@ -27,12 +35,12 @@ header nav {
   align-items: center;
 }
 header nav .logo-div {
+  width: 127.2px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 32px;
-  width: 127.2px;
-  height: 32px;
 }
 header nav .logo-div .logoSymbol {
   width: 32px;
@@ -49,72 +57,81 @@ header nav .burger-menu {
   margin-right: 32px;
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
 .hero-article .Container-div {
-  z-index: 4;
+  width: 311px;
+  height: 356px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 311px;
-  height: 356px;
+  z-index: 4;
 }
 .hero-article .Container-div .typography-div {
   height: 276px;
 }
 .hero-article .Container-div .typography-div .Title-h1 {
-  margin: 0;
-  height: 168px;
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
-  letter-spacing: -0.5px;
   color: #232340;
+  margin: 0;
+  height: 168px;
+  letter-spacing: -0.5px;
   margin-bottom: 24px;
 }
 .hero-article .Container-div .typography-div .Text-p {
-  font-family: "SF Pro Display Regular";
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
+  font-family: "SF Pro Display Regular";
   color: #606060;
 }
 .hero-article .Container-div .recentWork-btn {
-  background-color: #5468E7;
-  border: none;
-  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
   width: 160px;
   height: 56px;
   color: white;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0px;
+  border: none;
   text-align: center;
+  background-color: #5468E7;
+  border-radius: 8px;
+  letter-spacing: 0px;
 }
 .hero-article img {
   position: absolute;
   overflow: hidden;
 }
 .hero-article .heroPath-img {
-  z-index: 1;
   width: 456.68px;
   height: 582.58px;
+  z-index: 1;
   margin-left: 176px;
   top: -15.31px;
 }
 .hero-article .heroBg-img {
-  z-index: 2;
   width: 287px;
   height: 363.51px;
+  z-index: 2;
   margin-left: 155px;
   top: 448.77px;
 }
 .hero-article .heroGraphic-img {
-  z-index: 3;
   width: 725px;
   height: 515.56px;
+  z-index: 3;
   margin-left: -217px;
   top: 337px;
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
 .whatWeDo-article {
   height: 1216px;
 }
@@ -132,60 +149,63 @@ header nav .burger-menu {
   height: 234px;
 }
 .whatWeDo-article .Container-div .text-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: "SF Pro Text";
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #5468E7;
   width: 131px;
   height: 18px;
-  display: flex;
-  justify-content: space-between;
+  color: #5468E7;
 }
 .whatWeDo-article .Container-div .text-div .Title-h1 {
-  margin: 0;
-  width: 227px;
-  height: 192px;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
+  width: 227px;
+  height: 192px;
+  margin: 0;
   letter-spacing: -0.4px;
   color: #232340;
 }
 .whatWeDo-article .Container-div .arrow-span {
-  margin-top: 24px;
-  display: flex;
-  justify-content: right;
   width: 108px;
   height: 46px;
+  display: flex;
+  justify-content: right;
+  margin-top: 24px;
 }
 .whatWeDo-article .Container-div .arrow-span img {
   width: 46px;
   height: 46px;
 }
 .whatWeDo-article .serviceCard-div {
-  display: flex;
-  flex-direction: column;
-  margin-top: 56px;
-  width: 311px;
-  height: 856px;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
+  width: 311px;
+  height: 856px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  text-align: left;
   color: #5468E7;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div {
-  display: flex;
-  align-items: flex-start;
   width: 311px;
   height: 214px;
+  display: flex;
+  align-items: flex-start;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div {
-  display: flex;
-  align-items: center;
-  border-radius: 32px;
   width: 311px;
   height: 190px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 32px;
   transition: all ease-in-out 0.1s;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
@@ -193,12 +213,13 @@ header nav .burger-menu {
   color: white;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
-  margin-left: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
   width: 185px;
   height: 91.02px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-left: 48px;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
   width: 91.02px;
@@ -206,123 +227,124 @@ header nav .burger-menu {
   margin-right: 24px;
 }
 .whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
-  text-align: left;
   height: 24px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
   color: inherit;
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
 .achievement-article {
   margin-top: 56px;
 }
 .achievement-article .Container-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 227px;
   height: 399px;
-}
-.achievement-article .Container-div .text-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 227;
+}
+.achievement-article .Container-div .text-div {
+  width: 227px;
   height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .achievement-article .Container-div .text-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: "SF Pro Text";
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #232340;
   width: 131px;
   height: 18px;
-  display: flex;
-  justify-content: space-between;
+  color: #232340;
 }
 .achievement-article .Container-div .text-div .pageIndicator-span .pageNum {
   color: #8B8B8B;
 }
 .achievement-article .Container-div .text-div .Title-h1 {
-  width: 227px;
-  height: 128px;
-  left: 32px;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+  width: 227px;
+  height: 128px;
+  left: 32px;
   letter-spacing: -0.2px;
   color: #232340;
 }
 .achievement-article .Container-div .successfulProjects-div {
-  margin-top: 32px;
+  width: 194px;
+  height: 191px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 194px;
-  height: 191px;
+  margin-top: 32px;
 }
 .achievement-article .Container-div .successfulProjects-div .number-span {
-  text-align: center;
-  width: 177px;
-  height: 167px;
   font-weight: 600;
   font-size: 140px;
   line-height: 167px;
+  width: 177px;
+  height: 167px;
+  text-align: center;
   color: #5468E7;
 }
 .achievement-article .Container-div .successfulProjects-div .text-span {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 195px;
-  height: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  color: #000000;
+  width: 195px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
 }
 
 .pic_pagination-div {
-  margin-top: 20.23px;
   width: 375px;
   height: 600px;
+  margin-top: 20.23px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .pic_pagination-div .phone {
-  z-index: 3;
   width: 375px;
   height: 555px;
+  z-index: 3;
 }
 .pic_pagination-div .circle {
+  width: 330px;
+  height: 330px;
   z-index: 2;
   position: absolute;
   margin-top: 104.77px;
   background-color: #FFC7DF;
-  width: 330px;
-  height: 330px;
   border-radius: 50%;
 }
 .pic_pagination-div .pagination {
+  width: 69px;
+  height: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 69px;
-  height: 12px;
 }
 .pic_pagination-div .pagination .point {
-  border-radius: 50%;
   width: 5.69px;
   height: 5.69px;
+  border-radius: 50%;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.30171);
-  transition: all ease-in-out 0.1s;
 }
 .pic_pagination-div .pagination .point:hover {
-  background-color: #3A8FFF;
+  background-image: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
 }
 
 body {

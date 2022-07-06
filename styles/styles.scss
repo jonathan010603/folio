@@ -13,6 +13,7 @@
     src: url('../fonts/SF_Pro_display/sf-pro-text-regular.ttf');
 }
 
+@import './abstract/_variables.scss';
 @import './components/_header.scss';
 @import './components/_hero.scss';
 @import './components/_whatWeDo.scss';
@@ -20,13 +21,12 @@
 
 body {
     margin: 0;
-    font-family: 'SF Pro Display';
+    font-family: $display_bold;
 }
 
 main {
 
     section {
-
         margin-top: 128px;
 
         article {
