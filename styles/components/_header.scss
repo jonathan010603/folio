@@ -1,15 +1,32 @@
 @import '../abstract/_variables.scss';
 
+$headerBG: white;
+$openMenu: 'false';
+
+@mixin openCloseMenu {
+    @if ($openMenu == 'true') { 
+        display: flex; 
+    } 
+    @else {
+        display: none;
+    }
+}
+
 header {
     @include sizeWH (100vw, 128px);
-    z-index: 999;
-    background-color: white;
+    z-index: 5;
+    background-color: $headerBG;
     top: 0;
     position: fixed;
     display: flex;
-    nav {
+
+    .mobile_closed_menu-nav {
+        display: flex;
+    }
+
+    .mobile_closed_menu-nav, .mobile_open_menu-nav {
+        @include sizeWH (100%, 128px);
         z-index: 5;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,6 +37,7 @@ header {
             align-items: center;
             justify-content: space-between;
             margin-left: 32px;
+            cursor: pointer;
 
             .logoSymbol {
                 @include sizeWH (32px, 32px);
@@ -33,7 +51,74 @@ header {
 
         .burger-menu {
             @include sizeWH (32px, 12px);
+            cursor: pointer;
             margin-right: 32px;
+
+            &:hover {
+                $openMenu: 'true';
+            }
+        }
+    }
+    
+    .mobile_open_menu_container-div {
+        @include sizeWH (375px, 812px);
+        @include openCloseMenu;
+        z-index: 998;
+        position: absolute;
+        background-color: $dark;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .burger-menu {
+            cursor: pointer;
+            height: 32px;
+            $openMenu: 'false';
+        }
+
+        .mobile_open_menu_items-ul {
+            @include sizeWH (122px, 280px);
+            @include column_spaceBetween;
+            margin: 138px 0px 0px 32px;
+            padding: 0;
+            list-style: none;
+
+            li {
+                @include font_WeightSizeLineHeight (700, 32px, 40px);
+                height: 40px;
+                margin: 0;
+                font-family: $display_bold;
+                letter-spacing: -0.5px;
+                color: $shade_mobile_menu;
+                transition: all ease-in-out 0.1s;
+
+                &:hover {
+                    color: white;
+                    cursor: pointer;
+                }
+
+                &:nth-child(1) {
+                    height: 41px;
+                }
+                
+                &:nth-child(4) {
+                    height: 41px;
+                }
+            }
+
+        }
+
+        .bottom_icons-div {
+            @include row_spaceBetween;
+            @include sizeWH (184px, 40px);
+            margin: 146px 0px 0px 46px;
+
+            img {
+                @include sizeWH (40px, 40px);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
