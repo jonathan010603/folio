@@ -1,16 +1,7 @@
 @import '../abstract/_variables.scss';
 
 $headerBG: white;
-$openMenu: 'false';
-
-@mixin openCloseMenu {
-    @if ($openMenu == 'true') { 
-        display: flex; 
-    } 
-    @else {
-        display: none;
-    }
-}
+$menuDisplay: none;
 
 header {
     @include sizeWH (100vw, 128px);
@@ -55,14 +46,14 @@ header {
             margin-right: 32px;
 
             &:hover {
-                $openMenu: 'true';
+                $menuDisplay: flex;
             }
         }
     }
     
     .mobile_open_menu_container-div {
         @include sizeWH (375px, 812px);
-        @include openCloseMenu;
+        display: $menuDisplay;
         z-index: 998;
         position: absolute;
         background-color: $dark;
@@ -72,7 +63,7 @@ header {
         .burger-menu {
             cursor: pointer;
             height: 32px;
-            $openMenu: 'false';
+            $menuDisplay: none;
         }
 
         .mobile_open_menu_items-ul {
