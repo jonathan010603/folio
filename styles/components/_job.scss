@@ -57,6 +57,7 @@
                     @include sizeWH (311px, 175px);
                     background: #FFFFFF;
                     border-radius: 24px;
+                    transition: all ease-in-out 0.1s;
                     
                     &:hover {
                         background: $dark;

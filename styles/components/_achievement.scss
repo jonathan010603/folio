@@ -8,22 +8,27 @@
         @include column_spaceBetween;
 
         .text-div {
-            @include sizeWH (227px, 176px);
+            @include sizeWH (227px, 188px);
             @include column_spaceBetween;
 
             .pageIndicator-span {
                 @include row_spaceBetween;
                 @include pageIndicator;
-                color: $dark;
-                
+                @include sizeWH (156px, 24px);
+                color: $primary;
+
                 .pageNum {
-                    color: $body_dark;
+                    @include sizeWH (27px, 24px);
+                }
+
+                .pageName {
+                    @include sizeWH (105px, 24px);
                 }
             }
     
-            .Title-h1 {
+            .Title-h6 {
                 @include font_WeightSizeLineHeight (700, 24px, 32px);
-                @include sizeWH (227px, 128px);
+                @include sizeWH (227px, 129px);
                 left: 32px;
                 letter-spacing: -0.2px;
                 color: $dark;

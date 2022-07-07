@@ -17,7 +17,7 @@
                 color: $primary;
             }
     
-            .Title-h1 {
+            .Title-h4 {
                 @include font_WeightSizeLineHeight (700, 40px, 48px);
                 @include sizeWH (227px, 192px);
                 margin: 0;

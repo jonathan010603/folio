@@ -63,3 +63,70 @@
         top: 337px;
     }
 }
+
+.cta-section {
+    @include column_spaceBetween;
+    margin-left: 0;
+    align-items: center;
+
+    img {
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .bg {
+        @include sizeWH (342.91px, 977px);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-image: url('../../img/backgrounds/hero/cta/bg_cta.svg');
+        align-self: flex-end;
+        width: 100vw;
+    }
+
+    .phoneBG {
+        margin-top: 408px;
+    }
+
+    .Container-div {
+        @include sizeWH (261px, 344px);
+        @include column_spaceBetween;
+        z-index: 1;
+        margin-top: 64px;
+        margin-left: 39.91px;
+
+        .indicator_title-div {
+            @include column_spaceBetween;
+            @include sizeWH(261px, 269px);
+            text-align: left;
+
+            .pageIndicator-span {
+                @include row_spaceBetween;
+                @include pageIndicator;
+                font-family: $display_text;
+                width: 138px;
+                color: white;
+            }
+    
+            .Title-h3 {
+                @include font_WeightSizeLineHeight (700, 48px, 56px);
+                @include sizeWH (261px, 226px);
+                margin: 0;
+                letter-spacing: -0.5px;
+                font-family: $display_bold;
+                color: white;
+            }
+        }
+
+        .recentWork-btn {
+            @include font_WeightSizeLineHeight (600, 16px, 22px);
+            @include sizeWH (146px, 46px);
+            color: $primary;
+            border: none;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}

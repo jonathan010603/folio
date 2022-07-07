@@ -239,6 +239,87 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   top: 337px;
 }
 
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0;
+  align-items: center;
+}
+.cta-section img {
+  position: absolute;
+  overflow: hidden;
+}
+.cta-section .bg {
+  width: 342.91px;
+  height: 977px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url("../../img/backgrounds/hero/cta/bg_cta.svg");
+  align-self: flex-end;
+  width: 100vw;
+}
+.cta-section .phoneBG {
+  margin-top: 408px;
+}
+.cta-section .Container-div {
+  width: 261px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  margin-top: 64px;
+  margin-left: 39.91px;
+}
+.cta-section .Container-div .indicator_title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 261px;
+  height: 269px;
+  text-align: left;
+}
+.cta-section .Container-div .indicator_title-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  font-family: "SF Pro Text";
+  width: 138px;
+  color: white;
+}
+.cta-section .Container-div .indicator_title-div .Title-h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  width: 261px;
+  height: 226px;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: "SF Pro Display";
+  color: white;
+}
+.cta-section .Container-div .recentWork-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  width: 146px;
+  height: 46px;
+  color: #5468E7;
+  border: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* Fonts */
 /* Colors */
 /* General mixins */
@@ -271,7 +352,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 18px;
   color: #5468E7;
 }
-.whatWeDo-section .Container-div .text-div .Title-h1 {
+.whatWeDo-section .Container-div .text-div .Title-h4 {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -359,7 +440,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
 }
 .achievement-section .Container-div .text-div {
   width: 227px;
-  height: 176px;
+  height: 188px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -374,17 +455,24 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   font-family: "SF Pro Text";
   width: 131px;
   height: 18px;
-  color: #232340;
+  width: 156px;
+  height: 24px;
+  color: #5468E7;
 }
 .achievement-section .Container-div .text-div .pageIndicator-span .pageNum {
-  color: #8B8B8B;
+  width: 27px;
+  height: 24px;
 }
-.achievement-section .Container-div .text-div .Title-h1 {
+.achievement-section .Container-div .text-div .pageIndicator-span .pageName {
+  width: 105px;
+  height: 24px;
+}
+.achievement-section .Container-div .text-div .Title-h6 {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   width: 227px;
-  height: 128px;
+  height: 129px;
   left: 32px;
   letter-spacing: -0.2px;
   color: #232340;
@@ -723,6 +811,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 175px;
   background: #FFFFFF;
   border-radius: 24px;
+  transition: all ease-in-out 0.1s;
 }
 .job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG:hover {
   background: #232340;
@@ -793,6 +882,9 @@ main article section {
 }
 main .hero-article {
   height: 684px;
+}
+main .cta-article {
+  height: 977px;
 }
 main .services-article {
   height: 1691px;
