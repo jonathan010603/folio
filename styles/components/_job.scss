@@ -1,6 +1,7 @@
 @import '../abstract/_variables.scss';
 
 .job-article {
+    overflow: hidden;
     height: 1042px;
 
     .weAreHiring-section {
@@ -45,54 +46,79 @@
             display: flex;
             flex-direction: column;
             align-items: left;
-            overflow-x: hidden;
 
-            .jobDiv {
+            .jobCard {
                 @include sizeWH (311px, 191px);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
 
-                    .jobItems {
-                        z-index: 999;
-                        @include sizeWH (311px, 175px);
-                        background: #FFFFFF;
-                        border-radius: 24px;
+                .jobBG {
+                    @include sizeWH (311px, 175px);
+                    background: #FFFFFF;
+                    border-radius: 24px;
+                    
+                    &:hover {
+                        background: $dark;
+                        color: white;
 
-                        &:hover {
-                            background: $dark;
-                            color: white;
-
-                            .parag-p {
-                                color: $body_dark;
-                            }
+                        .parag-p {
+                            color: $body_dark;
                         }
 
-                        .jobData {
-                            margin-top: 81.51px;
-                            margin-left: 40px;
-
-                            .text {
-                                display: flex;
-                                flex-direction: column;
-    
-                                .parag-p {
-                                    @include sizeWH (126px, 28px);
-                                }
-    
-                                .jobName {
-                                    @include font_WeightSizeLineHeight (700, 24px, 32px);
-                                    margin-top: 45.51px;
-                                    letter-spacing: -0.2px;
-                                    color: inherit;
-                                }
-                            }
-    
-                            img {
-                                @include sizeWH (9.96px, 14.22px);
-                            }
+                        img {
+                            filter: brightness(0) invert(1);
                         }
                     }
 
+                    .text {
+                        @include sizeWH (187px, 64px);
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 45.61px;
+                        margin-left: 40px;
+
+                        .parag-p {
+                            @include sizeWH (126px, 28px);
+                        }
+
+                        .jobName {
+                            @include sizeWH (187px, 32px);
+                            @include font_WeightSizeLineHeight (700, 24px, 32px);
+                            letter-spacing: -0.2px;
+                            color: inherit;
+                        }
+                    }
+
+                    img {
+                        @include sizeWH (9.96px, 14.22px);
+                        margin-top: 10.67px;
+                        margin-left: 40px;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .text {
+                        @include sizeWH (187px, 64px);
+                    }
+                }
+
                 &:nth-child(2) {
-                    width: 414px;
+                    .text {
+                        @include sizeWH (156px, 56px);
+                    }
+                }
+
+                &:nth-child(3) {
+                    .text {
+                        @include sizeWH (126px, 64px);
+                    }
+                }
+
+                &:nth-child(4) {
+                    .text {
+                        @include sizeWH (191px, 64px);
+                    }
                 }
 
             }

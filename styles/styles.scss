@@ -14,11 +14,11 @@
 }
 
 @import './abstract/_variables.scss';
-@import './components/_header.scss';
+@import './components/header/_header.scss';
 @import './components/_hero.scss';
 @import './components/_services.scss';
 @import './components/_achievement.scss';
-@import './components/_work.scss';
+@import './components/work/_work.scss';
 @import './components/_job.scss';
 
 body {

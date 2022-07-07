@@ -1,0 +1,80 @@
+@import '../../abstract/_variables.scss';
+
+.mobile_open_menu-div {
+    @include sizeWH (100%, 100vh);
+    display: flex;
+    top: -100vh;
+    z-index: 998;
+    position: absolute;
+    background-color: $dark;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all ease-in-out 0.1s;
+
+    .burger-menu {
+        cursor: pointer;
+        height: 32px;
+        $menuDisplay: none;
+    }
+    
+    .mobile_open_menu_items-ul {
+        @include sizeWH (122px, 280px);
+        @include column_spaceBetween;
+        margin: 138px 0px 0px 32px;
+        padding: 0;
+        list-style: none;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            
+            &:hover {
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        li {
+            @include font_WeightSizeLineHeight (700, 32px, 40px);
+            height: 40px;
+            margin: 0;
+            font-family: $display_bold;
+            letter-spacing: -0.5px;
+            color: $shade_mobile_menu;
+            transition: all ease-in-out 0.1s;
+
+            &:nth-child(1) {
+                height: 41px;
+            }
+            
+            &:nth-child(4) {
+                height: 41px;
+            }
+        }
+
+    }
+
+    .bottom_icons-div {
+        @include row_spaceBetween;
+        @include sizeWH (184px, 40px);
+        margin: 146px 0px 0px 46px;
+
+        img {
+            @include sizeWH (40px, 40px);
+            transition: all ease-in-out 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .fb {
+            filter: invert(55%) sepia(49%) saturate(0%) hue-rotate(185deg) brightness(121%) contrast(75%);
+        }
+    }
+}
+
+.show {
+    top: 0;
+}

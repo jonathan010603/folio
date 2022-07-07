@@ -1,0 +1,80 @@
+@import '../../abstract/_variables.scss';
+@import './_open_menu.scss';
+
+$headerBG: white;
+
+header {
+    @include sizeWH (100vw, 128px);
+    border: none;
+    z-index: 5;
+    background-color: $headerBG;
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo_burger {
+        @include sizeWH (100%, 100%);
+        z-index: 999;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            cursor: pointer;
+        }
+
+        .logo_image_name-div {
+            @include sizeWH (127.2px, 32px);
+            display: flex;
+            margin-top: 52px;
+            margin-left: 32px;
+            cursor: pointer;
+
+            .logoSymbol {
+                @include sizeWH (32px, 32px);
+            }
+
+            .logoTxt {
+                @include sizeWH (66.4px, 23.87px);
+                transition: all ease-in-out 0.2s;
+                margin-top: 4.35px;
+                margin-left: 12.8px;
+            }
+        }
+
+        .burger-div {
+            @include sizeWH (32px, 12px);
+            margin-top: 62px;
+            margin-right: 32px;
+            cursor: pointer;
+
+            .bars {
+                transition: all ease-in-out 0.2s;
+                position: absolute;
+                &:nth-child(2) {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.changeHeader {
+
+    .logoTxt {
+        filter: brightness(0) invert(1);
+    }
+
+    .bars {
+        filter: brightness(0) invert(1);
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 5.5px);              
+        }
+        
+        &:nth-child(2) {
+            transform: rotate(-45deg) translate(0px, -5.5px);   
+        }
+    }
+}

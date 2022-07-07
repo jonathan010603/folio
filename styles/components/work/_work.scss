@@ -1,0 +1,52 @@
+@import '../../abstract/_variables.scss';
+@import './_portfolios_container.scss';
+
+.famousProjects-section {
+    height: 3484px;
+
+    .Container-div {
+        @include column_spaceBetween;
+        @include sizeWH(311px, 238px);
+
+        .indicator_title-div {
+            @include column_spaceBetween;
+            @include sizeWH(255px, 139px);
+            text-align: left;
+
+            .pageIndicator-span {
+                @include row_spaceBetween;
+                @include pageIndicator;
+                width: 161px;
+                color: $primary;
+            }
+    
+            .Title-h1 {
+                @include font_WeightSizeLineHeight (700, 40px, 48px);
+                @include sizeWH (255px, 96px);
+                margin: 0;
+                letter-spacing: -0.4px;
+                font-family: $display_bold;
+                color: $dark;
+            }
+        }
+
+        .parag-p {
+            @include font_WeightSizeLineHeight (400, 16px, 28px);
+            @include sizeWH (311px, 86px);
+            font-family: $display_regular;
+            text-align: left;
+            margin: 0;
+            color: $body_light;
+        }
+    }
+
+    .contactUs-btn {
+        @include font_WeightSizeLineHeight (600, 16px, 22px);
+        @include sizeWH (313px, 46px);
+        margin-top: 48.44px;
+        background-color: $primary;
+        color: white;
+        border: none;
+        border-radius: 8px;
+    }
+}
