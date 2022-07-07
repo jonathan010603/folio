@@ -16,8 +16,10 @@
 @import './abstract/_variables.scss';
 @import './components/_header.scss';
 @import './components/_hero.scss';
-@import './components/_whatWeDo.scss';
+@import './components/_services.scss';
 @import './components/_achievement.scss';
+@import './components/_work.scss';
+@import './components/_job.scss';
 
 body {
     margin: 0;
@@ -25,22 +27,22 @@ body {
 }
 
 main {
-
-    section {
+    
+    article {
         margin-top: 128px;
 
-        article {
+        section {
             margin-left: 32px;
             display: flex;
             flex-direction: column;
         }
     }
 
-    .hero-section {
+    .hero-article {
         height: 684px;
     }
 
-    .services-section {
+    .services-article {
         height: 1691px;
     }
 }

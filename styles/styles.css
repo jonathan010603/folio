@@ -21,6 +21,7 @@
 header {
   width: 100vw;
   height: 128px;
+  border: none;
   z-index: 5;
   background-color: white;
   top: 0;
@@ -59,18 +60,22 @@ header .mobile_closed_menu-nav .logo-div .logoTxt, header .mobile_open_menu-nav 
 header .mobile_closed_menu-nav .burger-menu, header .mobile_open_menu-nav .burger-menu {
   width: 32px;
   height: 12px;
-  cursor: pointer;
   margin-right: 32px;
 }
+header .mobile_closed_menu-nav .burger-menu:hover, header .mobile_open_menu-nav .burger-menu:hover {
+  cursor: pointer;
+}
 header .mobile_open_menu_container-div {
-  width: 375px;
+  width: 100%;
   height: 812px;
-  display: none;
+  margin-top: -100vh;
+  display: flex;
   z-index: 998;
   position: absolute;
   background-color: #232340;
   flex-direction: column;
   align-items: flex-start;
+  transition: all ease-in-out 0.1s;
 }
 header .mobile_open_menu_container-div .burger-menu {
   cursor: pointer;
@@ -86,6 +91,14 @@ header .mobile_open_menu_container-div .mobile_open_menu_items-ul {
   padding: 0;
   list-style: none;
 }
+header .mobile_open_menu_container-div .mobile_open_menu_items-ul a {
+  color: inherit;
+  text-decoration: none;
+}
+header .mobile_open_menu_container-div .mobile_open_menu_items-ul a:hover {
+  color: white;
+  cursor: pointer;
+}
 header .mobile_open_menu_container-div .mobile_open_menu_items-ul li {
   font-weight: 700;
   font-size: 32px;
@@ -96,10 +109,6 @@ header .mobile_open_menu_container-div .mobile_open_menu_items-ul li {
   letter-spacing: -0.5px;
   color: #595976;
   transition: all ease-in-out 0.1s;
-}
-header .mobile_open_menu_container-div .mobile_open_menu_items-ul li:hover {
-  color: white;
-  cursor: pointer;
 }
 header .mobile_open_menu_container-div .mobile_open_menu_items-ul li:nth-child(1) {
   height: 41px;
@@ -122,12 +131,18 @@ header .mobile_open_menu_container-div .bottom_icons-div img {
 header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   cursor: pointer;
 }
+header .show {
+  margin-top: 0;
+}
+header .hide {
+  display: none;
+}
 
 /* Fonts */
 /* Colors */
 /* General mixins */
 /* Flex mixins */
-.hero-article .Container-div {
+.hero-section .Container-div {
   width: 311px;
   height: 356px;
   display: flex;
@@ -135,10 +150,10 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   justify-content: space-between;
   z-index: 4;
 }
-.hero-article .Container-div .typography-div {
+.hero-section .Container-div .typography-div {
   height: 276px;
 }
-.hero-article .Container-div .typography-div .Title-h1 {
+.hero-section .Container-div .typography-div .Title-h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
@@ -148,14 +163,14 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   letter-spacing: -0.5px;
   margin-bottom: 24px;
 }
-.hero-article .Container-div .typography-div .Text-p {
+.hero-section .Container-div .typography-div .Text-p {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   font-family: "SF Pro Display Regular";
   color: #606060;
 }
-.hero-article .Container-div .recentWork-btn {
+.hero-section .Container-div .recentWork-btn {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -168,25 +183,25 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   border-radius: 8px;
   letter-spacing: 0px;
 }
-.hero-article img {
+.hero-section img {
   position: absolute;
   overflow: hidden;
 }
-.hero-article .heroPath-img {
+.hero-section .heroPath-img {
   width: 456.68px;
   height: 582.58px;
   z-index: 1;
   margin-left: 176px;
   top: -15.31px;
 }
-.hero-article .heroBg-img {
+.hero-section .heroBg-img {
   width: 287px;
   height: 363.51px;
   z-index: 2;
   margin-left: 155px;
   top: 448.77px;
 }
-.hero-article .heroGraphic-img {
+.hero-section .heroGraphic-img {
   width: 725px;
   height: 515.56px;
   z-index: 3;
@@ -198,35 +213,35 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
 /* Colors */
 /* General mixins */
 /* Flex mixins */
-.whatWeDo-article {
+.whatWeDo-section {
   height: 1216px;
 }
-.whatWeDo-article .Container-div {
+.whatWeDo-section .Container-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 227px;
   height: 304px;
 }
-.whatWeDo-article .Container-div .text-div {
+.whatWeDo-section .Container-div .text-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 234px;
 }
-.whatWeDo-article .Container-div .text-div .pageIndicator-span {
+.whatWeDo-section .Container-div .text-div .pageIndicator-span {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "SF Pro Text";
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  font-family: "SF Pro Text";
   width: 131px;
   height: 18px;
   color: #5468E7;
 }
-.whatWeDo-article .Container-div .text-div .Title-h1 {
+.whatWeDo-section .Container-div .text-div .Title-h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -236,18 +251,18 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   letter-spacing: -0.4px;
   color: #232340;
 }
-.whatWeDo-article .Container-div .arrow-span {
+.whatWeDo-section .Container-div .arrow-span {
   width: 108px;
   height: 46px;
   display: flex;
   justify-content: right;
   margin-top: 24px;
 }
-.whatWeDo-article .Container-div .arrow-span img {
+.whatWeDo-section .Container-div .arrow-span img {
   width: 46px;
   height: 46px;
 }
-.whatWeDo-article .serviceCard-div {
+.whatWeDo-section .serviceCard-div {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -259,13 +274,13 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   text-align: left;
   color: #5468E7;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div {
+.whatWeDo-section .serviceCard-div .serviceContainer-div {
   width: 311px;
   height: 214px;
   display: flex;
   align-items: flex-start;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div {
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div {
   width: 311px;
   height: 190px;
   display: flex;
@@ -274,12 +289,12 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   border-radius: 32px;
   transition: all ease-in-out 0.1s;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
   background-color: #5468E7;
   color: white;
   cursor: pointer;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
   width: 185px;
   height: 91.02px;
   display: flex;
@@ -288,12 +303,12 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   justify-content: left;
   margin-left: 48px;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
   width: 91.02px;
   height: 91.02px;
   margin-right: 24px;
 }
-.whatWeDo-article .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
   height: 24px;
   color: inherit;
 }
@@ -302,39 +317,39 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
 /* Colors */
 /* General mixins */
 /* Flex mixins */
-.achievement-article {
+.achievement-section {
   margin-top: 56px;
 }
-.achievement-article .Container-div {
+.achievement-section .Container-div {
   width: 227px;
   height: 399px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.achievement-article .Container-div .text-div {
+.achievement-section .Container-div .text-div {
   width: 227px;
   height: 176px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.achievement-article .Container-div .text-div .pageIndicator-span {
+.achievement-section .Container-div .text-div .pageIndicator-span {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "SF Pro Text";
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  font-family: "SF Pro Text";
   width: 131px;
   height: 18px;
   color: #232340;
 }
-.achievement-article .Container-div .text-div .pageIndicator-span .pageNum {
+.achievement-section .Container-div .text-div .pageIndicator-span .pageNum {
   color: #8B8B8B;
 }
-.achievement-article .Container-div .text-div .Title-h1 {
+.achievement-section .Container-div .text-div .Title-h1 {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -344,7 +359,7 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   letter-spacing: -0.2px;
   color: #232340;
 }
-.achievement-article .Container-div .successfulProjects-div {
+.achievement-section .Container-div .successfulProjects-div {
   width: 194px;
   height: 191px;
   display: flex;
@@ -352,7 +367,7 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   justify-content: space-between;
   margin-top: 32px;
 }
-.achievement-article .Container-div .successfulProjects-div .number-span {
+.achievement-section .Container-div .successfulProjects-div .number-span {
   font-weight: 600;
   font-size: 140px;
   line-height: 167px;
@@ -361,7 +376,7 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   text-align: center;
   color: #5468E7;
 }
-.achievement-article .Container-div .successfulProjects-div .text-span {
+.achievement-section .Container-div .successfulProjects-div .text-span {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -414,22 +429,315 @@ header .mobile_open_menu_container-div .bottom_icons-div img:hover {
   background-image: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
+.famousProjects-section {
+  height: 3484px;
+}
+.famousProjects-section .Container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 311px;
+  height: 238px;
+}
+.famousProjects-section .Container-div .indicator_title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 255px;
+  height: 139px;
+  text-align: left;
+}
+.famousProjects-section .Container-div .indicator_title-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  width: 161px;
+  color: #5468E7;
+}
+.famousProjects-section .Container-div .indicator_title-div .Title-h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  width: 255px;
+  height: 96px;
+  margin: 0;
+  letter-spacing: -0.4px;
+  font-family: "SF Pro Display";
+  color: #232340;
+}
+.famousProjects-section .Container-div .parag-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  width: 311px;
+  height: 86px;
+  font-family: "SF Pro Display Regular";
+  text-align: left;
+  margin: 0;
+  color: #606060;
+}
+.famousProjects-section .portfolios-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 313px;
+  height: 3047.56px;
+  margin-top: 56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div {
+  width: 313px;
+  height: 583.56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div .imgContainer-div {
+  width: 311px;
+  height: 355.56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 17.0667px;
+}
+.famousProjects-section .portfolios-container .portfolio-div .text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 312px;
+}
+.famousProjects-section .portfolios-container .portfolio-div .text-div .title {
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  width: 312px;
+  height: 32px;
+  letter-spacing: -0.2px;
+  color: #232340;
+}
+.famousProjects-section .portfolios-container .portfolio-div .text-div p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  width: 228px;
+  height: 84px;
+  font-family: "SF Pro Display Regular";
+  color: #606060;
+  margin: 0;
+}
+.famousProjects-section .portfolios-container .portfolio-div .arrow {
+  width: 48px;
+  height: 48px;
+  margin-top: 24px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(1) {
+  width: 312.11px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(1) .imgContainer-div {
+  background-color: #FFBA79;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(1) .portfolioImg {
+  width: 311px;
+  height: 313px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(1) .text-div {
+  margin-top: 29.44px;
+  height: 126.56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(2) {
+  width: 312.11px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(2) .imgContainer-div {
+  background-color: #E8BEFF;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(2) .portfolioImgg {
+  width: 311px;
+  height: 309px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(2) .text-div {
+  margin-top: 34.44px;
+  height: 121.56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(3) .imgContainer-div {
+  background-color: #FFCE79;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(3) .portfolioImg {
+  width: 311px;
+  height: 321px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(3) .text-div {
+  margin-top: 39.44px;
+  height: 116.56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(4) .imgContainer-div {
+  background-color: #D1ECFD;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(4) .portfolioImg {
+  width: 311px;
+  height: 345px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(4) .text-div {
+  margin-top: 49.44px;
+  height: 111.56px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(5) .imgContainer-div {
+  background-color: #FFBA79;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(5) .portfolioImg {
+  width: 311px;
+  height: 306px;
+}
+.famousProjects-section .portfolios-container .portfolio-div:nth-child(5) .text-div {
+  margin-top: 49.44px;
+  height: 106.56px;
+}
+.famousProjects-section .contactUs-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  width: 313px;
+  height: 46px;
+  margin-top: 48.44px;
+  background-color: #5468E7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
+.job-article {
+  height: 1042px;
+}
+.job-article .weAreHiring-section .Container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 311px;
+  height: 198px;
+}
+.job-article .weAreHiring-section .Container-div .text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 227px;
+  height: 91px;
+}
+.job-article .weAreHiring-section .Container-div .text-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  width: 138px;
+  height: 18px;
+  color: #5468E7;
+}
+.job-article .weAreHiring-section .Container-div .text-div .Title-h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  width: 227px;
+  height: 48px;
+  margin: 0;
+  letter-spacing: -0.4px;
+  color: #232340;
+}
+.job-article .weAreHiring-section .parag-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  width: 311px;
+  height: 84px;
+  font-family: "SF Pro Display Regular";
+  text-align: left;
+  margin: 0;
+  color: #606060;
+}
+.job-article .weAreHiring-section .jobsContainer-div {
+  width: 343px;
+  height: 764px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  overflow-x: hidden;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv {
+  width: 311px;
+  height: 191px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems {
+  z-index: 999;
+  width: 311px;
+  height: 175px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems:hover {
+  background: #232340;
+  color: white;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems:hover .parag-p {
+  color: #8B8B8B;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems .jobData {
+  margin-top: 81.51px;
+  margin-left: 40px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems .jobData .text {
+  display: flex;
+  flex-direction: column;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems .jobData .text .parag-p {
+  width: 126px;
+  height: 28px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems .jobData .text .jobName {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 45.51px;
+  letter-spacing: -0.2px;
+  color: inherit;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv .jobItems .jobData img {
+  width: 9.96px;
+  height: 14.22px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobDiv:nth-child(2) {
+  width: 414px;
+}
+
 body {
   margin: 0;
   font-family: "SF Pro Display";
 }
 
-main section {
+main article {
   margin-top: 128px;
 }
-main section article {
+main article section {
   margin-left: 32px;
   display: flex;
   flex-direction: column;
 }
-main .hero-section {
+main .hero-article {
   height: 684px;
 }
-main .services-section {
+main .services-article {
   height: 1691px;
 }/*# sourceMappingURL=styles.css.map */

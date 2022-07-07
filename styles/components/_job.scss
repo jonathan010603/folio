@@ -1,0 +1,101 @@
+@import '../abstract/_variables.scss';
+
+.job-article {
+    height: 1042px;
+
+    .weAreHiring-section {
+
+        .Container-div {
+            @include column_spaceBetween;
+            @include sizeWH (311px, 198px);
+
+            .text-div {
+                @include column_spaceBetween;
+                @include sizeWH (227px, 91px);
+
+                .pageIndicator-span {
+                    @include row_spaceBetween;
+                    @include pageIndicator;
+                    @include sizeWH (138px, 18px);
+                    color: $primary;
+                }
+        
+                .Title-h1 {
+                    @include font_WeightSizeLineHeight (700, 40px, 48px);
+                    @include sizeWH (227px, 48px);
+                    margin: 0;
+                    letter-spacing: -0.4px;
+                    color: $dark;
+                }
+            }
+        }
+
+        .parag-p {
+            @include font_WeightSizeLineHeight (400, 16px, 28px);
+            @include sizeWH (311px, 84px);
+            font-family: $display_regular;
+            text-align: left;
+            margin: 0;
+            color: $body_light;
+        }
+
+        .jobsContainer-div {
+            @include sizeWH (343px, 764px);
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            overflow-x: hidden;
+
+            .jobDiv {
+                @include sizeWH (311px, 191px);
+
+                    .jobItems {
+                        z-index: 999;
+                        @include sizeWH (311px, 175px);
+                        background: #FFFFFF;
+                        border-radius: 24px;
+
+                        &:hover {
+                            background: $dark;
+                            color: white;
+
+                            .parag-p {
+                                color: $body_dark;
+                            }
+                        }
+
+                        .jobData {
+                            margin-top: 81.51px;
+                            margin-left: 40px;
+
+                            .text {
+                                display: flex;
+                                flex-direction: column;
+    
+                                .parag-p {
+                                    @include sizeWH (126px, 28px);
+                                }
+    
+                                .jobName {
+                                    @include font_WeightSizeLineHeight (700, 24px, 32px);
+                                    margin-top: 45.51px;
+                                    letter-spacing: -0.2px;
+                                    color: inherit;
+                                }
+                            }
+    
+                            img {
+                                @include sizeWH (9.96px, 14.22px);
+                            }
+                        }
+                    }
+
+                &:nth-child(2) {
+                    width: 414px;
+                }
+
+            }
+        }
+    }
+}

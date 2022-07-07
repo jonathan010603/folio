@@ -37,10 +37,8 @@ $linear_gradient_blue: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
 }
 
 @mixin pageIndicator {
+    @include font_WeightSizeLineHeight(600, 14px, 18px);
     font-family: $display_text;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
     width: 131px;
     height: 18px;
 }
