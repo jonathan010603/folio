@@ -256,7 +256,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   position: absolute;
   background-repeat: no-repeat;
   background-position: right;
-  background-image: url("../../img/backgrounds/hero/cta/bg_cta.svg");
+  background-image: url("../img/backgrounds/hero/cta/bg_cta.svg");
   align-self: flex-end;
   width: 100vw;
 }
