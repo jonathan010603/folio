@@ -626,7 +626,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   position: absolute;
   background-repeat: no-repeat;
   background-position: right;
-  background-image: url("../../../img/backgrounds/work/cta/bg_cta.svg");
+  background-image: url("../img/backgrounds/work/cta/bg_cta.svg");
   align-self: flex-end;
   width: 100vw;
 }
@@ -925,7 +925,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 548px;
   display: flex;
   flex-direction: column;
-  background-image: url("../../../img/backgrounds/footer/Contact.svg");
+  background-image: url("../img/backgrounds/footer/Contact.svg");
 }
 .footer-article .Container-div .contact-div p {
   margin: 0;
