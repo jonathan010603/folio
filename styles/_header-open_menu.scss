@@ -1,4 +1,4 @@
-@import '../../abstract/_variables.scss';
+@import './_variables.scss';
 
 .mobile_open_menu-div {
     @include sizeWH (100%, 100vh);
@@ -6,7 +6,7 @@
     top: -100vh;
     z-index: 998;
     position: absolute;
-    background-color: $dark;
+    background-image: url('../img/backgrounds/header/Mobile-menu.svg');
     flex-direction: column;
     align-items: flex-start;
     transition: all ease-in-out 0.1s;

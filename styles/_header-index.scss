@@ -1,13 +1,10 @@
-@import '../../abstract/_variables.scss';
-@import './_open_menu.scss';
-
-$headerBG: white;
+@import './_variables.scss';
+@import './_header-open_menu.scss';
 
 header {
     @include sizeWH (100vw, 128px);
     border: none;
     z-index: 5;
-    background-color: $headerBG;
     top: 0;
     position: fixed;
     display: flex;

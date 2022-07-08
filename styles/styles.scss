@@ -13,13 +13,13 @@
     src: url('../fonts/SF_Pro_display/sf-pro-text-regular.ttf');
 }
 
-@import './abstract/_variables.scss';
-@import './components/header/_header.scss';
-@import './components/_hero.scss';
-@import './components/_services.scss';
-@import './components/_achievement.scss';
-@import './components/work/_work.scss';
-@import './components/_job.scss';
+@import './_variables.scss';
+@import './_header-index.scss';
+@import './_hero-index.scss';
+@import './_services-index.scss';
+@import './_work-index.scss';
+@import './_job-index.scss';
+@import './_footer-index.scss';
 
 body {
     margin: 0;
@@ -48,5 +48,9 @@ main {
 
     .services-article {
         height: 1691px;
+    }
+
+    .footer-article {
+        height: 977px;
     }
 }

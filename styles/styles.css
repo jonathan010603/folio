@@ -29,7 +29,7 @@
   top: -100vh;
   z-index: 998;
   position: absolute;
-  background-color: #232340;
+  background-image: url("../img/backgrounds/header/Mobile-menu.svg");
   flex-direction: column;
   align-items: flex-start;
   transition: all ease-in-out 0.1s;
@@ -103,7 +103,6 @@ header {
   height: 128px;
   border: none;
   z-index: 5;
-  background-color: white;
   top: 0;
   position: fixed;
   display: flex;
@@ -172,6 +171,14 @@ header .logo_burger .burger-div .bars:nth-child(2) {
 /* Colors */
 /* General mixins */
 /* Flex mixins */
+.heroBG {
+  top: 0;
+  position: absolute;
+  background-image: url("../img/backgrounds/hero/bg.svg");
+  width: 100%;
+  height: 812px;
+}
+
 .hero-section .Container-div {
   width: 311px;
   height: 356px;
@@ -239,191 +246,10 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   top: 337px;
 }
 
-.cta-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0;
-  align-items: center;
-}
-.cta-section img {
-  position: absolute;
-  overflow: hidden;
-}
-.cta-section .bg {
-  width: 342.91px;
-  height: 977px;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-image: url("../img/backgrounds/hero/cta/bg_cta.svg");
-  align-self: flex-end;
-  width: 100vw;
-}
-.cta-section .phoneBG {
-  margin-top: 408px;
-}
-.cta-section .Container-div {
-  width: 261px;
-  height: 344px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1;
-  margin-top: 64px;
-  margin-left: 39.91px;
-}
-.cta-section .Container-div .indicator_title-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 261px;
-  height: 269px;
-  text-align: left;
-}
-.cta-section .Container-div .indicator_title-div .pageIndicator-span {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "SF Pro Text";
-  width: 131px;
-  height: 18px;
-  font-family: "SF Pro Text";
-  width: 138px;
-  color: white;
-}
-.cta-section .Container-div .indicator_title-div .Title-h3 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  width: 261px;
-  height: 226px;
-  margin: 0;
-  letter-spacing: -0.5px;
-  font-family: "SF Pro Display";
-  color: white;
-}
-.cta-section .Container-div .recentWork-btn {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  width: 146px;
-  height: 46px;
-  color: #5468E7;
-  border: none;
-  text-align: center;
-  background-color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 /* Fonts */
 /* Colors */
 /* General mixins */
 /* Flex mixins */
-.whatWeDo-section {
-  height: 1216px;
-}
-.whatWeDo-section .Container-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 227px;
-  height: 304px;
-}
-.whatWeDo-section .Container-div .text-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 234px;
-}
-.whatWeDo-section .Container-div .text-div .pageIndicator-span {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "SF Pro Text";
-  width: 131px;
-  height: 18px;
-  color: #5468E7;
-}
-.whatWeDo-section .Container-div .text-div .Title-h4 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  width: 227px;
-  height: 192px;
-  margin: 0;
-  letter-spacing: -0.4px;
-  color: #232340;
-}
-.whatWeDo-section .Container-div .arrow-span {
-  width: 108px;
-  height: 46px;
-  display: flex;
-  justify-content: right;
-  margin-top: 24px;
-}
-.whatWeDo-section .Container-div .arrow-span img {
-  width: 46px;
-  height: 46px;
-}
-.whatWeDo-section .serviceCard-div {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  width: 311px;
-  height: 856px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 56px;
-  text-align: left;
-  color: #5468E7;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div {
-  width: 311px;
-  height: 214px;
-  display: flex;
-  align-items: flex-start;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div {
-  width: 311px;
-  height: 190px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 32px;
-  transition: all ease-in-out 0.1s;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
-  background-color: #5468E7;
-  color: white;
-  cursor: pointer;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
-  width: 185px;
-  height: 91.02px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  margin-left: 48px;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
-  width: 91.02px;
-  height: 91.02px;
-  margin-right: 24px;
-}
-.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
-  height: 24px;
-  color: inherit;
-}
-
 /* Fonts */
 /* Colors */
 /* General mixins */
@@ -547,6 +373,117 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   background-image: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
 }
 
+.servicesBG {
+  top: 0;
+  position: absolute;
+  background-image: url("../img/backgrounds/services/bg.svg");
+  width: 100%;
+  height: 1344px;
+}
+
+.whatWeDo-section {
+  height: 1216px;
+}
+.whatWeDo-section .Container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 227px;
+  height: 304px;
+  z-index: 1;
+}
+.whatWeDo-section .Container-div .text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+}
+.whatWeDo-section .Container-div .text-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  color: #5468E7;
+}
+.whatWeDo-section .Container-div .text-div .Title-h4 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  width: 227px;
+  height: 192px;
+  margin: 0;
+  letter-spacing: -0.4px;
+  color: #232340;
+}
+.whatWeDo-section .Container-div .arrow-span {
+  width: 108px;
+  height: 46px;
+  display: flex;
+  justify-content: right;
+  margin-top: 24px;
+}
+.whatWeDo-section .Container-div .arrow-span img {
+  width: 46px;
+  height: 46px;
+}
+.whatWeDo-section .serviceCard-div {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  width: 311px;
+  height: 856px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  text-align: left;
+  color: #5468E7;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div {
+  width: 311px;
+  height: 214px;
+  display: flex;
+  align-items: flex-start;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div {
+  width: 311px;
+  height: 190px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 32px;
+  transition: all ease-in-out 0.1s;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
+  background-color: #5468E7;
+  color: white;
+  cursor: pointer;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
+  width: 185px;
+  height: 91.02px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-left: 48px;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
+  width: 91.02px;
+  height: 91.02px;
+  margin-right: 24px;
+}
+.whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
+  height: 24px;
+  color: inherit;
+}
+
 /* Fonts */
 /* Colors */
 /* General mixins */
@@ -668,6 +605,91 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 106.56px;
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0;
+  align-items: center;
+}
+.cta-section img {
+  position: absolute;
+  overflow: hidden;
+}
+.cta-section .bg {
+  width: 342.91px;
+  height: 977px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url("../../../img/backgrounds/work/cta/bg_cta.svg");
+  align-self: flex-end;
+  width: 100vw;
+}
+.cta-section .phoneBG {
+  margin-top: 408px;
+}
+.cta-section .Container-div {
+  width: 261px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  margin-top: 64px;
+  margin-left: 39.91px;
+}
+.cta-section .Container-div .indicator_title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 261px;
+  height: 269px;
+  text-align: left;
+}
+.cta-section .Container-div .indicator_title-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  font-family: "SF Pro Text";
+  width: 138px;
+  color: white;
+}
+.cta-section .Container-div .indicator_title-div .Title-h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  width: 261px;
+  height: 226px;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: "SF Pro Display";
+  color: white;
+}
+.cta-section .Container-div .recentWork-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  width: 146px;
+  height: 46px;
+  color: #5468E7;
+  border: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .famousProjects-section {
   height: 3484px;
 }
@@ -742,7 +764,15 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   overflow: hidden;
   height: 1042px;
 }
+.job-article .jobsBG {
+  top: 0;
+  position: absolute;
+  background-image: url("../img/backgrounds/job/bg.svg");
+  width: 100%;
+  height: 1170px;
+}
 .job-article .weAreHiring-section .Container-div {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -792,6 +822,7 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   color: #606060;
 }
 .job-article .weAreHiring-section .jobsContainer-div {
+  z-index: 1;
   width: 343px;
   height: 764px;
   margin-top: 48px;
@@ -867,6 +898,197 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 64px;
 }
 
+/* Fonts */
+/* Colors */
+/* General mixins */
+/* Flex mixins */
+.footer-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-article .footerBG {
+  position: absolute;
+  background-image: url("../img/backgrounds/footer/footer_bg.svg");
+  width: 100%;
+  height: 977px;
+}
+.footer-article .Container-div {
+  z-index: 1;
+  width: 312px;
+  height: 943px;
+}
+.footer-article .Container-div .contact-div {
+  width: 312px;
+  height: 548px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../../img/backgrounds/footer/Contact.svg");
+}
+.footer-article .Container-div .contact-div p {
+  margin: 0;
+}
+.footer-article .Container-div .contact-div .bubble-img {
+  width: 73px;
+  height: 73px;
+  margin-top: 49px;
+  margin-left: 139px;
+}
+.footer-article .Container-div .contact-div .text-top {
+  width: 236px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+}
+.footer-article .Container-div .contact-div .text-top .hello-span {
+  width: 90px;
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer-article .Container-div .contact-div .text-top .hello-span .emoji {
+  width: 14px;
+  height: 18px;
+}
+.footer-article .Container-div .contact-div .text-top .hello-span .phrase {
+  width: 63px;
+  height: 18px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Display";
+  color: white;
+}
+.footer-article .Container-div .contact-div .text-top .paragraph {
+  width: 236px;
+  height: 72px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "SF Pro Display";
+  text-align: center;
+  color: white;
+}
+.footer-article .Container-div .contact-div .text-bottom {
+  width: 263px;
+  height: 173px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+  margin-top: 85px;
+}
+.footer-article .Container-div .contact-div .text-bottom .nextProject-p {
+  width: 260px;
+  height: 81px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "SF Pro Display";
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: white;
+}
+.footer-article .Container-div .contact-div .text-bottom .contact-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  width: 263px;
+  height: 56px;
+  color: #5468E7;
+  border: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.footer-article .Container-div .footer-div {
+  width: 311px;
+  height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 80px;
+  align-items: center;
+}
+.footer-article .Container-div .footer-div .logo-div {
+  width: 136px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-article .Container-div .footer-div .logo-div .logoSymbol {
+  width: 34.2px;
+  height: 35px;
+}
+.footer-article .Container-div .footer-div .logo-div .logoTxt {
+  width: 70.99px;
+  height: 26.11px;
+  margin-left: 13.69px;
+}
+.footer-article .Container-div .footer-div .text-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  width: 256px;
+  height: 56px;
+  font-family: "SF Pro Display Regular";
+  color: #ADADAD;
+  text-align: center;
+}
+.footer-article .Container-div .footer-div .dropdown {
+  width: 311px;
+  height: 48px;
+  border: 1px solid #D8D8D8;
+  border-radius: 8px;
+  outline: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #606060;
+  background-color: transparent;
+}
+.footer-article .Container-div .footer-div .dropdown .option {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  width: 77px;
+  height: 16px;
+  font-family: "SF Pro Text";
+}
+.footer-article .Container-div .footer-div .bottom-div {
+  width: 136px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-article .Container-div .footer-div .bottom-div .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  filter: invert(55%) sepia(49%) saturate(0%) hue-rotate(185deg) brightness(121%) contrast(75%);
+}
+.footer-article .Container-div .footer-div .bottom-div .copyright {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  width: 103px;
+  height: 16px;
+  color: #ADADAD;
+  font-family: "SF Pro Display Regular";
+  text-align: center;
+}
+
 body {
   margin: 0;
   font-family: "SF Pro Display";
@@ -888,4 +1110,7 @@ main .cta-article {
 }
 main .services-article {
   height: 1691px;
+}
+main .footer-article {
+  height: 977px;
 }/*# sourceMappingURL=styles.css.map */

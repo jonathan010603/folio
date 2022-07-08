@@ -1,68 +1,4 @@
-@import '../abstract/_variables.scss';
-
-.hero-section {
-
-    .Container-div {
-        @include sizeWH (311px, 356px);
-        @include column_spaceBetween;
-        z-index: 4;
-
-        .typography-div {
-            height: 276px;
-
-            .Title-h1 {
-                @include font_WeightSizeLineHeight (700, 48px, 56px);
-                color: $dark;
-                margin: 0;
-                height: 168px;
-                letter-spacing: -0.5px;
-                margin-bottom: 24px;
-            }
-    
-            .Text-p {
-                @include font_WeightSizeLineHeight (400, 16px, 28px);
-                font-family: $display_regular;
-                color: $body_light;
-            }
-        }
-
-        .recentWork-btn {
-            @include font_WeightSizeLineHeight (600, 16px, 22px);
-            @include sizeWH (160px, 56px);
-            color: white;
-            border: none;
-            text-align: center;
-            background-color: $primary;
-            border-radius: 8px;
-            letter-spacing: 0px;
-        }
-    }      
-    img {
-        position: absolute;
-        overflow: hidden;
-    }
-
-    .heroPath-img {
-        @include sizeWH (456.68px, 582.58px);
-        z-index: 1;
-        margin-left: 176px;
-        top: -15.31px;
-    }
-
-    .heroBg-img {
-        @include sizeWH (287px, 363.51px);
-        z-index: 2;
-        margin-left: 155px;
-        top: 448.77px;
-    }
-
-    .heroGraphic-img {
-        @include sizeWH (725px, 515.56px);
-        z-index: 3;
-        margin-left: -217px;
-        top: 337px;
-    }
-}
+@import './_variables.scss';
 
 .cta-section {
     @include column_spaceBetween;
@@ -79,7 +15,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-position: right;
-        background-image: url('../../img/backgrounds/hero/cta/bg_cta.svg');
+        background-image: url('../../../img/backgrounds/work/cta/bg_cta.svg');
         align-self: flex-end;
         width: 100vw;
     }

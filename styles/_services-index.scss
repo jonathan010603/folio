@@ -1,4 +1,13 @@
-@import '../abstract/_variables.scss';
+@import './_variables.scss';
+@import './_services-achievement.scss';
+
+.servicesBG {
+    top: 0;
+    position: absolute;
+    background-image: url('../img/backgrounds/services/bg.svg');
+    width: 100%;
+    height: 1344px;
+}
 
 .whatWeDo-section {
     height: 1216px;
@@ -6,6 +15,7 @@
     .Container-div {
         @include column_spaceBetween;
         @include sizeWH (227px, 304px);
+        z-index: 1;
 
         .text-div {
             @include column_spaceBetween;
@@ -41,6 +51,7 @@
     .serviceCard-div {
         @include font_WeightSizeLineHeight (600, 18px, 24px);
         @include sizeWH (311px, 856px);
+        z-index: 1; 
         display: flex;
         flex-direction: column;
         margin-top: 56px;
@@ -55,6 +66,7 @@
             .serviceBG-div {
                 @include sizeWH (311px, 190px);
                 @include row_alignCenter;
+                background-color: white;
                 border-radius: 32px;
                 transition: all ease-in-out 0.1s;
 

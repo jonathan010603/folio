@@ -1,0 +1,164 @@
+@import './_variables.scss';
+
+.footer-article {
+
+    .footerBG {
+        position: absolute;
+        background-image: url('../img/backgrounds/footer/footer_bg.svg');
+        width: 100%;
+        height: 977px;
+    }
+
+    @include column_spaceBetween;
+    align-items: center;
+    justify-content: space-between;
+
+    .Container-div {
+        z-index: 1;
+        @include sizeWH (312px, 943px);
+
+        .contact-div {
+            @include sizeWH (312px, 548px);
+            display: flex;
+            flex-direction: column;
+            background-image: url('../../../img/backgrounds/footer/Contact.svg');
+
+            p {
+                margin: 0;
+            }
+
+            .bubble-img {
+                @include sizeWH (73px, 73px);
+                margin-top: 49px;
+                margin-left: 139px;
+            }
+
+            .text-top {
+                @include sizeWH (236px, 130px);
+                @include column_spaceBetween;
+                align-self: center;
+                align-items: center;
+
+                .hello-span {
+                    @include sizeWH (90px, 18px);
+                    @include row_spaceBetween;
+                    align-items: baseline;
+
+                    .emoji {
+                        @include sizeWH (14px, 18px);
+                    }
+
+                    .phrase {
+                        @include sizeWH (63px, 18px);
+                        @include font_WeightSizeLineHeight (600, 14px, 18px);
+                        font-family: $display_bold;
+                        color: white;
+                    }
+                }
+
+                .paragraph {
+                    @include sizeWH (236px, 72px);
+                    @include font_WeightSizeLineHeight (600, 18px, 24px);
+                    font-family: $display_bold;
+                    text-align: center;              
+                    color: white;
+                }
+            }
+
+            .text-bottom {
+                @include sizeWH (263px, 173px);
+                @include column_spaceBetween;
+                align-self: center;
+                align-items: center;
+                margin-top: 85px;
+
+                .nextProject-p {
+                    @include sizeWH (260px, 81px);
+                    @include font_WeightSizeLineHeight (700, 32px, 40px);
+                    font-family: $display_bold;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: white;
+                }
+                
+                .contact-btn {
+                    @include font_WeightSizeLineHeight (600, 16px, 22px);
+                    @include sizeWH (263px, 56px);
+                    color: $primary;
+                    border: none;
+                    text-align: center;
+                    background-color: white;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .footer-div {
+            @include sizeWH (311px, 315px);
+            @include column_spaceBetween;
+            margin-top: 80px;
+            align-items: center;
+
+            .logo-div {
+                @include sizeWH (136px, 35px);
+                @include row_alignCenter;
+
+                .logoSymbol {
+                    @include sizeWH (34.2px, 35px);
+                }
+                
+                .logoTxt {
+                    @include sizeWH (70.99px, 26.11px);
+                    margin-left: 13.69px;
+                }
+
+            }
+
+            .text-p {
+                @include font_WeightSizeLineHeight(400, 16px, 28px);
+                @include sizeWH (256px, 56px);
+                font-family: $display_regular;
+                color: $deactive;
+                text-align: center;
+            }
+
+            .dropdown {
+                @include sizeWH (311px, 48px);
+                border: 1px solid $stroke_1;
+                border-radius: 8px;
+                outline: none;
+                padding-left: 24px;
+                padding-right: 24px;
+                color: $body_light;
+                background-color: transparent;
+
+                .option {
+                    @include font_WeightSizeLineHeight(600, 12px, 16px);
+                    @include sizeWH (77px, 16px);
+                    font-family: $display_text;
+                    
+                }
+            }
+
+            .bottom-div {
+                @include sizeWH (136px, 88px);
+                @include column_spaceBetween;
+                align-items: center;
+
+                .icons {
+                    @include row_spaceBetween;
+                    filter: invert(55%) sepia(49%) saturate(0%) hue-rotate(185deg) brightness(121%) contrast(75%);
+                }
+
+                .copyright {
+                    @include font_WeightSizeLineHeight(600, 12px, 16px);
+                    @include sizeWH (103px, 16px);
+                    color: $deactive;
+                    font-family: $display_regular;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
