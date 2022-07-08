@@ -107,6 +107,7 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
+  background-color: white;
   justify-content: space-between;
 }
 header .logo_burger {
