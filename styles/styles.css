@@ -833,6 +833,18 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: center;
   border-radius: 17.0667px;
 }
+@media only screen and (min-width: 768px) {
+  .portfolios-container .portfolio-div .imgContainer-div:nth-child(1) {
+    width: 470px;
+    height: 370px;
+    margin-left: 212.07px;
+  }
+  .portfolios-container .portfolio-div .imgContainer-div:nth-child(2) {
+    width: 470px;
+    height: 370px;
+    margin-left: 212.07px;
+  }
+}
 .portfolios-container .portfolio-div .text-div {
   display: flex;
   flex-direction: column;
@@ -1020,6 +1032,13 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: space-between;
   width: 311px;
   height: 238px;
+}
+@media only screen and (min-width: 768px) {
+  .famousProjects-section .Container-div {
+    width: 485px;
+    height: 243px;
+    margin-left: 141px;
+  }
 }
 .famousProjects-section .Container-div .indicator_title-div {
   display: flex;
@@ -1452,7 +1471,7 @@ main article section {
 }
 @media only screen and (min-width: 1025px) {
   main article section {
-    margin-left: 135px;
+    margin-left: 174.8px;
   }
 }
 main .cta-article {

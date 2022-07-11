@@ -1,11 +1,13 @@
 @import './_variables.scss';
 @import './_work-portfolios.scss';
 @import './_work-cta.scss';
+@import './_work-media.scss';
 
 .famousProjects-section {
     height: 3484px;
 
     .Container-div {
+        @include Container-div_media;
         @include column_spaceBetween;
         @include sizeWH(311px, 238px);
 
