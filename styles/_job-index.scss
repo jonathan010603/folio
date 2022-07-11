@@ -142,8 +142,9 @@
                 }
 
                 &:nth-child(4) {
+
                     .text {
-                        @include sizeWH (191px, 64px);
+                        @include sizeWH (151px, 64px);
                     }
                 }
 

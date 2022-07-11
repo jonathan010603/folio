@@ -3,11 +3,21 @@
 @import './_work-cta.scss';
 @import './_work-media.scss';
 
+.work-article {
+    @media only screen and (min-width: 768px) {
+        margin-top: 150px;
+    }
+}
+
 .famousProjects-section {
+    @include famousProjects_section-media;
+    margin: 0;
     height: 3484px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .Container-div {
-        @include Container-div_media;
         @include column_spaceBetween;
         @include sizeWH(311px, 238px);
 
@@ -24,6 +34,7 @@
             }
     
             .Title-h1 {
+                @include title-media;
                 @include font_WeightSizeLineHeight (700, 40px, 48px);
                 @include sizeWH (255px, 96px);
                 margin: 0;
@@ -34,12 +45,27 @@
         }
 
         .parag-p {
+            @include parag-media;
             @include font_WeightSizeLineHeight (400, 16px, 28px);
             @include sizeWH (311px, 86px);
             font-family: $display_regular;
             text-align: left;
             margin: 0;
             color: $body_light;
+
+            .mobile-br {
+                @media only screen and (min-width: 768px) {
+                    display: none;
+                }
+                display: inherit;
+            }
+
+            .desktop-br {
+                @media only screen and (min-width: 768px) {
+                    display: inherit;
+                }
+                display: none;
+            }
         }
     }
 

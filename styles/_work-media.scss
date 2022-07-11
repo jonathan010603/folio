@@ -1,0 +1,44 @@
+.contactUsTablet-btn {
+    position: absolute;
+    @include font_WeightSizeLineHeight (600, 16px, 22px);
+    @include sizeWH (118.04px, 45.51px);
+    top: 200px;
+    right: 95.96px;
+    background-color: $primary;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: inherit;
+    }
+}
+
+h1 {
+    br {
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
+        display: inherit;
+    }
+}
+
+@mixin title-media {
+    @media only screen and (min-width: 768px) {
+        @include font_WeightSizeLineHeight (700, 64px, 72px);
+        @include sizeWH (485px, 72px);
+    }
+}
+
+@mixin parag-media {
+    @media only screen and (min-width: 768px) {
+        @include font_WeightSizeLineHeight (400, 16px, 28px);
+        @include sizeWH (329px, 84px);
+    }
+}
+
+@mixin famousProjects_section-media {
+    @media only screen and (max-width: 375px) {
+        margin-left: 32px;
+    }
+}

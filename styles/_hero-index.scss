@@ -1,6 +1,28 @@
 @import './_variables.scss';
 @import './_hero-media.scss';
 
+.linesMobile {
+    @include linesMobile-media;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.linesTablet {
+    @include linesTablet-media;
+    position: absolute;
+    top: 0;
+    left: 228.27px;
+    display: none;
+}
+
+.linesDesktop {
+    @include linesDesktop-media;
+    position: absolute;
+    top: 0;
+    left: 321px;
+}
+
 .heroBG {
     @include heroBG-media;
     @include sizeWH (327px, 363px);

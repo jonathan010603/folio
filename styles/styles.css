@@ -107,7 +107,7 @@ header {
   top: 0;
   position: absolute;
   display: flex;
-  background-color: white;
+  background-color: transparent;
 }
 @media only screen and (min-width: 768px) {
   header {
@@ -212,8 +212,7 @@ header .navigation .contactUs {
 }
 @media only screen and (min-width: 1025px) {
   header .navigation .contactUs {
-    margin-left: 240px;
-    right: 72px;
+    margin-left: auto;
   }
 }
 header .logoBox {
@@ -324,6 +323,45 @@ header .logoBox .burger-div .bars:nth-child(2) {
 /* Colors */
 /* General mixins */
 /* Flex mixins */
+.linesMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .linesMobile {
+    display: none;
+  }
+}
+
+.linesTablet {
+  position: absolute;
+  top: 0;
+  left: 228.27px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .linesTablet {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .linesTablet {
+    display: none;
+  }
+}
+
+.linesDesktop {
+  position: absolute;
+  top: 0;
+  left: 321px;
+}
+@media only screen and (min-width: 1025px) {
+  .linesDesktop {
+    display: inherit;
+  }
+}
+
 .heroBG {
   width: 327px;
   height: 363px;
@@ -481,6 +519,7 @@ header .logoBox .burger-div .bars:nth-child(2) {
     line-height: 100.24px;
     height: 303px;
     margin-bottom: 36px;
+    letter-spacing: -1px;
   }
 }
 .hero-section .hero_content-div .typography-div .text-p {
@@ -833,18 +872,6 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: center;
   border-radius: 17.0667px;
 }
-@media only screen and (min-width: 768px) {
-  .portfolios-container .portfolio-div .imgContainer-div:nth-child(1) {
-    width: 470px;
-    height: 370px;
-    margin-left: 212.07px;
-  }
-  .portfolios-container .portfolio-div .imgContainer-div:nth-child(2) {
-    width: 470px;
-    height: 370px;
-    margin-left: 212.07px;
-  }
-}
 .portfolios-container .portfolio-div .text-div {
   display: flex;
   flex-direction: column;
@@ -1023,8 +1050,53 @@ header .logoBox .burger-div .bars:nth-child(2) {
   cursor: pointer;
 }
 
+.contactUsTablet-btn {
+  position: absolute;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  width: 118.04px;
+  height: 45.51px;
+  top: 200px;
+  right: 95.96px;
+  background-color: #5468E7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .contactUsTablet-btn {
+    display: inherit;
+  }
+}
+
+h1 br {
+  display: inherit;
+}
+@media only screen and (min-width: 768px) {
+  h1 br {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .work-article {
+    margin-top: 150px;
+  }
+}
+
 .famousProjects-section {
+  margin: 0;
   height: 3484px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 375px) {
+  .famousProjects-section {
+    margin-left: 32px;
+  }
 }
 .famousProjects-section .Container-div {
   display: flex;
@@ -1032,13 +1104,6 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: space-between;
   width: 311px;
   height: 238px;
-}
-@media only screen and (min-width: 768px) {
-  .famousProjects-section .Container-div {
-    width: 485px;
-    height: 243px;
-    margin-left: 141px;
-  }
 }
 .famousProjects-section .Container-div .indicator_title-div {
   display: flex;
@@ -1072,6 +1137,15 @@ header .logoBox .burger-div .bars:nth-child(2) {
   font-family: "SF Pro Display";
   color: #232340;
 }
+@media only screen and (min-width: 768px) {
+  .famousProjects-section .Container-div .indicator_title-div .Title-h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    width: 485px;
+    height: 72px;
+  }
+}
 .famousProjects-section .Container-div .parag-p {
   font-weight: 400;
   font-size: 16px;
@@ -1082,6 +1156,31 @@ header .logoBox .burger-div .bars:nth-child(2) {
   text-align: left;
   margin: 0;
   color: #606060;
+}
+@media only screen and (min-width: 768px) {
+  .famousProjects-section .Container-div .parag-p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    width: 329px;
+    height: 84px;
+  }
+}
+.famousProjects-section .Container-div .parag-p .mobile-br {
+  display: inherit;
+}
+@media only screen and (min-width: 768px) {
+  .famousProjects-section .Container-div .parag-p .mobile-br {
+    display: none;
+  }
+}
+.famousProjects-section .Container-div .parag-p .desktop-br {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .famousProjects-section .Container-div .parag-p .desktop-br {
+    display: inherit;
+  }
 }
 .famousProjects-section .contactUs-btn {
   font-weight: 600;
@@ -1250,7 +1349,7 @@ header .logoBox .burger-div .bars:nth-child(2) {
   height: 64px;
 }
 .job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(4) .text {
-  width: 191px;
+  width: 151px;
   height: 64px;
 }
 

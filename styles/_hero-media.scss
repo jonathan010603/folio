@@ -1,3 +1,25 @@
+@mixin linesMobile-media {
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+@mixin linesTablet-media {
+    @media only screen and (min-width: 768px) {
+        display: inherit;
+    }
+   
+    @media only screen and (min-width: 1025px) {
+        display: none;
+    }
+}
+
+@mixin linesDesktop-media {
+    @media only screen and (min-width: 1025px) {
+        display: inherit;
+    }
+}
+
 @mixin heroBG-media {
     @media only screen and (min-width: 480px) {
         @include sizeWH (400px, 436px);
@@ -95,6 +117,7 @@
         @include font_WeightSizeLineHeight (700, 84px, 100.24px);
         height: 303px;
         margin-bottom: 36px;
+        letter-spacing: -1px;
     }
 }
 
