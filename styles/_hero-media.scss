@@ -1,0 +1,129 @@
+@mixin heroBG-media {
+    @media only screen and (min-width: 480px) {
+        @include sizeWH (400px, 436px);
+        top: 375.77px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        @include sizeWH (490px, 450px);
+        top: 361.77px;
+    }
+    
+    @media only screen and (min-width: 767px) {
+        display: none;
+    }
+}
+
+@mixin heroBG_tablet-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH (400px, 540px);
+        right: 50px;
+        top: 225px;
+        display: flex;
+    }
+    
+    @media only screen and (min-width: 830px) {
+        @include sizeWH (450px, 550px);
+        right: 50px;
+        top: 200px;
+        display: flex;
+    }
+    
+    @media only screen and (min-width: 950px) {
+        @include sizeWH (569.38px, 524.8px);
+        right: 84.62px;
+        top: 146.49px;
+        display: flex;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        display: none;
+    }
+}
+
+@mixin heroBG_desktop-media {
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (598px, 538px);
+        display: flex;
+        top: 206px;
+        right: 60px;
+    }
+    
+    @media only screen and (min-width: 1145px) {
+        @include sizeWH (650px, 590px);
+        display: flex;
+        top: 206px;
+        right: 60px;
+    }
+    
+    @media only screen and (min-width: 1285px) {
+        @include sizeWH (798px, 738px);
+        display: flex;
+        top: 206px;
+        right: 119px;
+    }
+}
+
+@mixin hero_content-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH (332px, 512px);
+    }
+
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (467px, 706px);
+    }
+}
+
+@mixin typography-media {
+    @media only screen and (min-width: 768px) {
+        height: 323px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        height: 435px;
+    }
+}
+
+@mixin title-media {
+    @media only screen and (min-width: 768px) {
+        @include font_WeightSizeLineHeight (700, 64px, 72px);
+        height: 217px;
+        margin-bottom: 22px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (700, 84px, 100.24px);
+        height: 303px;
+        margin-bottom: 36px;
+    }
+}
+
+@mixin text-media {
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (400, 18px, 32px);
+    }
+}
+
+@mixin recentWork-media {
+    @media only screen and (min-width: 768px) {
+        @include font_WeightSizeLineHeight (400, 16px, 28px);
+        margin-top: 32px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (700, 18px, 24px);
+        margin-top: 48px;
+    }
+}
+
+@mixin swipe-media {
+    @media only screen and (min-width: 768px) {
+        margin-top: 56px;
+        display: flex;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        margin-top: 110px;
+        display: flex;
+    }
+}

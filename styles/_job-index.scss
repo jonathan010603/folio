@@ -67,19 +67,6 @@
                     background: #FFFFFF;
                     border-radius: 24px;
                     transition: all ease-in-out 0.1s;
-                    
-                    &:hover {
-                        background: $dark;
-                        color: white;
-
-                        .parag-p {
-                            color: $body_dark;
-                        }
-
-                        img {
-                            filter: brightness(0) invert(1);
-                        }
-                    }
 
                     .text {
                         @include sizeWH (187px, 64px);
@@ -104,6 +91,35 @@
                         @include sizeWH (9.96px, 14.22px);
                         margin-top: 10.67px;
                         margin-left: 40px;
+                    }
+
+                    .textNotification {
+                        @include row_spaceBetween;
+                        width: 226px;
+
+                        .notification {
+                            @include sizeWH (24px, 24px);
+                            margin: 7px 0 0 15px;
+                            align-self: center;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    width: 414px;
+
+                    .jobBG {
+                        width: 414px;
+                        background-image: url('../img/backgrounds/job/visual_designer.svg');
+                        color: white;
+    
+                        .parag-p {
+                            color: $body_dark;
+                        }
+    
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
                     }
                 }
 

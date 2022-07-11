@@ -9,17 +9,28 @@
 </head>
 <body>
     <header>
-        <div class="logo_burger">
-            <a href="./index.html">
-                <div class="logo_image_name-div">
-                    <img src="./img/logo/logo_symbol.svg" class="logoSymbol">
-                    <img src="./img/logo/folio.svg" class="logoTxt">
+        <div class="navigation">
+            <div class="logoBox">
+                <a href="./index.html">
+                    <div class="logo_image_name-div">
+                        <img src="./img/logo/logo_symbol.svg" class="logoSymbol">
+                        <img src="./img/logo/folio.svg" class="logoTxt">
+                    </div>
+                </a>
+                <div src="./img/icons/burger_icon.svg" class="burger-div">
+                    <img src="./img/icons/Rectangle.svg" class="bars">
+                    <img src="./img/icons/Rectangle.svg" class="bars">
                 </div>
-            </a>
-            <div src="./img/icons/burger_icon.svg" class="burger-div">
-                <img src="./img/icons/Rectangle.svg" class="bars">
-                <img src="./img/icons/Rectangle.svg" class="bars">
             </div>
+            <div class="nav_items">
+                <ul class="nav_ul">
+                    <li class="menu_item-li"><a>About</a></li>
+                    <li class="menu_item-li"><a href="./work.html">Work</a></li>
+                    <li class="menu_item-li"><a href="./services.html">Services</a></li>
+                    <li class="menu_item-li"><a href="./job.html">Jobs</a></li>
+                </ul>
+            </div>
+            <div class="contactUs">Contact Us</div>
         </div>
 
         <div class="mobile_open_menu-div">
@@ -38,18 +49,21 @@
     </header>
     <main>
         <article class="hero-article">
-            <div class="heroBG"></div>
             <section class="hero-section">
-                <div class="Container-div">
+                <img src="./img/backgrounds/hero/bg.svg" class="heroBG">
+                <img src="./img/backgrounds/hero/bg_tablet.svg" class="heroBG_tablet">
+                <img src="./img/backgrounds/hero/bg_desktop.svg" class="heroBG_desktop">
+                <div class="hero_content-div">
                     <div class="typography-div">
-                        <h1 class="Title-h1">Stand Out<br/>from The Crowd.</h1>
-                        <p class="Text-p">
-                            Agency is a full-service agency, 
-                            busy designing and building beautiful digital products, 
-                            brands, and experiences.
+                        <h1 class="Title-h1">Stand Out<br/>from The<br/>Crowd.</h1>
+                        <p class="text-p">
+                            Agency is a full-service agency, busy<br class="mobile-br"/> 
+                            designing<br class="desktop-br"/> and building beautiful digital<br class="mobile-br"/>
+                            products, brands,<br class="desktop-br"/> and experiences.
                         </p>
                     </div>
                     <button class="recentWork-btn">Recent Work</button>
+                    <div class="swipe-div"></div>
                 </div>
             </section>
         </article>

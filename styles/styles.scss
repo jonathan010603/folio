@@ -29,17 +29,23 @@ body {
 main {
     
     article {
+        @media only screen and (min-width: 1025px) {
+            margin-top: 238px;
+        }
         margin-top: 128px;
 
         section {
+            @media only screen and (min-width: 768px) {
+                margin-left: 107px;
+                margin-top: 169px;
+            }
+            @media only screen and (min-width: 1025px) {
+                margin-left: 135px;
+            }
             margin-left: 32px;
             display: flex;
             flex-direction: column;
         }
-    }
-
-    .hero-article {
-        height: 684px;
     }
     
     .cta-article {

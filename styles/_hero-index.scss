@@ -1,22 +1,43 @@
 @import './_variables.scss';
+@import './_hero-media.scss';
 
 .heroBG {
-    top: 0;
+    @include heroBG-media;
+    @include sizeWH (327px, 363px);
+    right: 0;
+    bottom: 0;
+    top: 448.77px;
     position: absolute;
-    background-image: url('../img/backgrounds/hero/bg.svg');
-    width: 100%;
-    height: 812px;
 }
+
+.heroBG_tablet {
+    @include heroBG_tablet-media;
+    @include sizeWH (361.33px, 313.42px);
+    position: absolute;
+    display: none;
+}
+
+.heroBG_desktop {
+    @include heroBG_desktop-media;
+    @include sizeWH (327px, 363px);
+    position: absolute;
+    display: none;
+}
+
 .hero-section {
-    .Container-div {
-        @include sizeWH (311px, 356px);
-        @include column_spaceBetween;
+
+    .hero_content-div {
+        @include hero_content-media;
+        display: flex;
+        flex-direction: column;
         z-index: 4;
 
         .typography-div {
+            @include typography-media;
             height: 276px;
 
             .Title-h1 {
+                @include title-media;
                 @include font_WeightSizeLineHeight (700, 48px, 56px);
                 color: $dark;
                 margin: 0;
@@ -25,14 +46,31 @@
                 margin-bottom: 24px;
             }
     
-            .Text-p {
+            .text-p {
+                @include text-media;
                 @include font_WeightSizeLineHeight (400, 16px, 28px);
                 font-family: $display_regular;
                 color: $body_light;
+                margin: 0;
+
+                .mobile-br {
+                    @media only screen and (min-width: 1025px) {
+                        display: none;
+                    }
+                    display: inherit;
+                }
+
+                .desktop-br {
+                    @media only screen and (min-width: 1025px) {
+                        display: inherit;
+                    }
+                    display: none;
+                }
             }
         }
 
         .recentWork-btn {
+            @include recentWork-media;
             @include font_WeightSizeLineHeight (600, 16px, 22px);
             @include sizeWH (160px, 56px);
             color: white;
@@ -41,31 +79,18 @@
             background-color: $primary;
             border-radius: 8px;
             letter-spacing: 0px;
+            margin-top: 24px;
+        }
+
+        .swipe-div {
+            @include swipe-media;
+            @include sizeWH (150px, 44px);
+            background-color: red;
+            display: none;
         }
     }      
     img {
         position: absolute;
         overflow: hidden;
-    }
-
-    .heroPath-img {
-        @include sizeWH (456.68px, 582.58px);
-        z-index: 1;
-        margin-left: 176px;
-        top: -15.31px;
-    }
-
-    .heroBg-img {
-        @include sizeWH (287px, 363.51px);
-        z-index: 2;
-        margin-left: 155px;
-        top: 448.77px;
-    }
-
-    .heroGraphic-img {
-        @include sizeWH (725px, 515.56px);
-        z-index: 3;
-        margin-left: -217px;
-        top: 337px;
     }
 }

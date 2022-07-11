@@ -1,0 +1,93 @@
+@mixin header-media {
+    @media only screen and (min-width: 768px) {
+        height: 56px;
+        top: 39.51px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        height: 64px;
+        top: 64px;
+    }
+}
+
+@mixin nav_items-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH (346px, 22px);
+        margin-left: 146px;
+        display: flex; 
+    }
+    
+    @media only screen and (max-width: 880px) {
+        margin-left: 100px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (392px, 24px);
+        margin-left: 100px;
+    }
+    
+    @media only screen and (min-width: 1212px) {
+        margin-left: 293px;
+    }
+}
+
+@mixin contactUs-media {
+    @media only screen and (min-width: 768px) {
+        margin-left: 113.2px;
+        margin-right: 50px;
+        display: flex;
+    }
+
+    @media only screen and (max-width: 880px) {
+        margin-left: 50px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        margin-left: 240px;
+        right: 72px;
+    }
+}
+
+@mixin logoBox-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH (127.2px, 32px);
+        margin-left: 50px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (159px, 40px);
+        min-width: 159px;
+        margin-left: 72px;
+    }
+}
+
+@mixin logo_image_name-media {
+    @media only screen and (min-width: 768px) {
+        margin-right: 12.8px;
+        margin-left: 0px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (127.2px, 32px);
+        margin-right: 16px;
+        margin-left: 0px;
+    }
+}
+
+@mixin logoSymbol-media {
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (40px, 40px);
+    }
+}
+
+@mixin logoTxt-media {
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (83px, 29.84px);
+    }
+}
+
+@mixin burger-media {
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+}

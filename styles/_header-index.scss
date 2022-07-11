@@ -1,40 +1,99 @@
 @import './_variables.scss';
 @import './_header-open_menu.scss';
+@import './_header-media.scss';
 
 header {
+
+    @include header-media;
     @include sizeWH (100vw, 128px);
+    min-width: 256px;
     border: none;
     z-index: 5;
     top: 0;
-    position: fixed;
+    position: absolute;
     display: flex;
-    align-items: center;
     background-color: white;
-    justify-content: space-between;
     
-    .logo_burger {
-        @include sizeWH (100%, 100%);
-        z-index: 999;
+    .navigation {
+        width: 100%;
+        height: 100%;
+        display: flex;
         position: absolute;
+        align-items: center;
+    
+        .nav_items {
+            @include nav_items-media;
+            @include sizeWH (346px, 22px);
+            min-width: 300px;
+            display: none;
+            .nav_ul {
+                width: 100%;
+                @include row_spaceBetween;
+                align-items: center;
+                padding: 0;
+                list-style: none;
+        
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        color: $primary;
+                        cursor: pointer;
+                    }
+                }
+
+                li {
+                    @include font_WeightSizeLineHeight (600, 16px, 22px);
+                    height: 22px;
+                    margin: 0;
+                    font-family: $display_bold;
+                    letter-spacing: -0.5px;
+                    color: $body_dark;
+                    transition: all ease-in-out 0.1s;
+                }
+            }
+        }
+
+        .contactUs {
+            @include contactUs-media;
+            @include sizeWH (180px, 64px);
+            display: none;
+            background-color: $dark;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: $display_regular;
+            border-radius: 8px;
+        }
+    }
+
+    .logoBox {
+        @include logoBox-media;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        width: 100%;
 
         a {
             cursor: pointer;
         }
 
         .logo_image_name-div {
+            @include logo_image_name-media;
             @include sizeWH (127.2px, 32px);
-            display: flex;
-            margin-top: 52px;
             margin-left: 32px;
+            display: flex;
             cursor: pointer;
 
             .logoSymbol {
+                @include logoSymbol-media;
                 @include sizeWH (32px, 32px);
             }
 
             .logoTxt {
+                @include logoTxt-media;
                 @include sizeWH (66.4px, 23.87px);
                 transition: all ease-in-out 0.2s;
                 margin-top: 4.35px;
@@ -43,8 +102,8 @@ header {
         }
 
         .burger-div {
+            @include burger-media;
             @include sizeWH (32px, 12px);
-            margin-top: 62px;
             margin-right: 32px;
             cursor: pointer;
 
@@ -60,6 +119,7 @@ header {
 }
 
 .changeHeader {
+    position: fixed;
 
     .logoTxt {
         filter: brightness(0) invert(1);

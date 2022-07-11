@@ -3,7 +3,7 @@
 .mobile_open_menu-div {
     @include sizeWH (100%, 100vh);
     display: flex;
-    top: -100vh;
+    top: -200vh;
     z-index: 998;
     position: absolute;
     background-image: url('../img/backgrounds/header/Mobile-menu.svg');

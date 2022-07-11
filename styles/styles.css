@@ -26,7 +26,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  top: -100vh;
+  top: -200vh;
   z-index: 998;
   position: absolute;
   background-image: url("../img/backgrounds/header/Mobile-menu.svg");
@@ -101,60 +101,212 @@
 header {
   width: 100vw;
   height: 128px;
+  min-width: 256px;
   border: none;
   z-index: 5;
   top: 0;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  justify-content: space-between;
-}
-header .logo_burger {
-  width: 100%;
-  height: 100%;
-  z-index: 999;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  background-color: white;
 }
-header .logo_burger a {
+@media only screen and (min-width: 768px) {
+  header {
+    height: 56px;
+    top: 39.51px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  header {
+    height: 64px;
+    top: 64px;
+  }
+}
+header .navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+header .navigation .nav_items {
+  width: 346px;
+  height: 22px;
+  min-width: 300px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  header .navigation .nav_items {
+    width: 346px;
+    height: 22px;
+    margin-left: 146px;
+    display: flex;
+  }
+}
+@media only screen and (max-width: 880px) {
+  header .navigation .nav_items {
+    margin-left: 100px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  header .navigation .nav_items {
+    width: 392px;
+    height: 24px;
+    margin-left: 100px;
+  }
+}
+@media only screen and (min-width: 1212px) {
+  header .navigation .nav_items {
+    margin-left: 293px;
+  }
+}
+header .navigation .nav_items .nav_ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+header .navigation .nav_items .nav_ul a {
+  color: inherit;
+  text-decoration: none;
+}
+header .navigation .nav_items .nav_ul a:hover {
+  color: #5468E7;
   cursor: pointer;
 }
-header .logo_burger .logo_image_name-div {
+header .navigation .nav_items .nav_ul li {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  height: 22px;
+  margin: 0;
+  font-family: "SF Pro Display";
+  letter-spacing: -0.5px;
+  color: #8B8B8B;
+  transition: all ease-in-out 0.1s;
+}
+header .navigation .contactUs {
+  width: 180px;
+  height: 64px;
+  display: none;
+  background-color: #232340;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "SF Pro Display Regular";
+  border-radius: 8px;
+}
+@media only screen and (min-width: 768px) {
+  header .navigation .contactUs {
+    margin-left: 113.2px;
+    margin-right: 50px;
+    display: flex;
+  }
+}
+@media only screen and (max-width: 880px) {
+  header .navigation .contactUs {
+    margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  header .navigation .contactUs {
+    margin-left: 240px;
+    right: 72px;
+  }
+}
+header .logoBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  header .logoBox {
+    width: 127.2px;
+    height: 32px;
+    margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  header .logoBox {
+    width: 159px;
+    height: 40px;
+    min-width: 159px;
+    margin-left: 72px;
+  }
+}
+header .logoBox a {
+  cursor: pointer;
+}
+header .logoBox .logo_image_name-div {
   width: 127.2px;
   height: 32px;
-  display: flex;
-  margin-top: 52px;
   margin-left: 32px;
+  display: flex;
   cursor: pointer;
 }
-header .logo_burger .logo_image_name-div .logoSymbol {
+@media only screen and (min-width: 768px) {
+  header .logoBox .logo_image_name-div {
+    margin-right: 12.8px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  header .logoBox .logo_image_name-div {
+    width: 127.2px;
+    height: 32px;
+    margin-right: 16px;
+    margin-left: 0px;
+  }
+}
+header .logoBox .logo_image_name-div .logoSymbol {
   width: 32px;
   height: 32px;
 }
-header .logo_burger .logo_image_name-div .logoTxt {
+@media only screen and (min-width: 1025px) {
+  header .logoBox .logo_image_name-div .logoSymbol {
+    width: 40px;
+    height: 40px;
+  }
+}
+header .logoBox .logo_image_name-div .logoTxt {
   width: 66.4px;
   height: 23.87px;
   transition: all ease-in-out 0.2s;
   margin-top: 4.35px;
   margin-left: 12.8px;
 }
-header .logo_burger .burger-div {
+@media only screen and (min-width: 1025px) {
+  header .logoBox .logo_image_name-div .logoTxt {
+    width: 83px;
+    height: 29.84px;
+  }
+}
+header .logoBox .burger-div {
   width: 32px;
   height: 12px;
-  margin-top: 62px;
   margin-right: 32px;
   cursor: pointer;
 }
-header .logo_burger .burger-div .bars {
+@media only screen and (min-width: 768px) {
+  header .logoBox .burger-div {
+    display: none;
+  }
+}
+header .logoBox .burger-div .bars {
   transition: all ease-in-out 0.2s;
   position: absolute;
 }
-header .logo_burger .burger-div .bars:nth-child(2) {
+header .logoBox .burger-div .bars:nth-child(2) {
   margin-top: 8px;
 }
 
+.changeHeader {
+  position: fixed;
+}
 .changeHeader .logoTxt {
   filter: brightness(0) invert(1);
 }
@@ -173,25 +325,137 @@ header .logo_burger .burger-div .bars:nth-child(2) {
 /* General mixins */
 /* Flex mixins */
 .heroBG {
-  top: 0;
+  width: 327px;
+  height: 363px;
+  right: 0;
+  bottom: 0;
+  top: 448.77px;
   position: absolute;
-  background-image: url("../img/backgrounds/hero/bg.svg");
-  width: 100%;
-  height: 812px;
+}
+@media only screen and (min-width: 480px) {
+  .heroBG {
+    width: 400px;
+    height: 436px;
+    top: 375.77px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .heroBG {
+    width: 490px;
+    height: 450px;
+    top: 361.77px;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .heroBG {
+    display: none;
+  }
 }
 
-.hero-section .Container-div {
-  width: 311px;
-  height: 356px;
+.heroBG_tablet {
+  width: 361.33px;
+  height: 313.42px;
+  position: absolute;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .heroBG_tablet {
+    width: 400px;
+    height: 540px;
+    right: 50px;
+    top: 225px;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 830px) {
+  .heroBG_tablet {
+    width: 450px;
+    height: 550px;
+    right: 50px;
+    top: 200px;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .heroBG_tablet {
+    width: 569.38px;
+    height: 524.8px;
+    right: 84.62px;
+    top: 146.49px;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .heroBG_tablet {
+    display: none;
+  }
+}
+
+.heroBG_desktop {
+  width: 327px;
+  height: 363px;
+  position: absolute;
+  display: none;
+}
+@media only screen and (min-width: 1025px) {
+  .heroBG_desktop {
+    width: 598px;
+    height: 538px;
+    display: flex;
+    top: 206px;
+    right: 60px;
+  }
+}
+@media only screen and (min-width: 1145px) {
+  .heroBG_desktop {
+    width: 650px;
+    height: 590px;
+    display: flex;
+    top: 206px;
+    right: 60px;
+  }
+}
+@media only screen and (min-width: 1285px) {
+  .heroBG_desktop {
+    width: 798px;
+    height: 738px;
+    display: flex;
+    top: 206px;
+    right: 119px;
+  }
+}
+
+.hero-section .hero_content-div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   z-index: 4;
 }
-.hero-section .Container-div .typography-div {
+@media only screen and (min-width: 768px) {
+  .hero-section .hero_content-div {
+    width: 332px;
+    height: 512px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div {
+    width: 467px;
+    height: 706px;
+  }
+}
+.hero-section .hero_content-div .typography-div {
   height: 276px;
 }
-.hero-section .Container-div .typography-div .Title-h1 {
+@media only screen and (min-width: 768px) {
+  .hero-section .hero_content-div .typography-div {
+    height: 323px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .typography-div {
+    height: 435px;
+  }
+}
+.hero-section .hero_content-div .typography-div .Title-h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
@@ -201,14 +465,56 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   letter-spacing: -0.5px;
   margin-bottom: 24px;
 }
-.hero-section .Container-div .typography-div .Text-p {
+@media only screen and (min-width: 768px) {
+  .hero-section .hero_content-div .typography-div .Title-h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    height: 217px;
+    margin-bottom: 22px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .typography-div .Title-h1 {
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 100.24px;
+    height: 303px;
+    margin-bottom: 36px;
+  }
+}
+.hero-section .hero_content-div .typography-div .text-p {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   font-family: "SF Pro Display Regular";
   color: #606060;
+  margin: 0;
 }
-.hero-section .Container-div .recentWork-btn {
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .typography-div .text-p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+.hero-section .hero_content-div .typography-div .text-p .mobile-br {
+  display: inherit;
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .typography-div .text-p .mobile-br {
+    display: none;
+  }
+}
+.hero-section .hero_content-div .typography-div .text-p .desktop-br {
+  display: none;
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .typography-div .text-p .desktop-br {
+    display: inherit;
+  }
+}
+.hero-section .hero_content-div .recentWork-btn {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -220,31 +526,45 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   background-color: #5468E7;
   border-radius: 8px;
   letter-spacing: 0px;
+  margin-top: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .hero-section .hero_content-div .recentWork-btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 32px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .recentWork-btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 48px;
+  }
+}
+.hero-section .hero_content-div .swipe-div {
+  width: 150px;
+  height: 44px;
+  background-color: red;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .hero-section .hero_content-div .swipe-div {
+    margin-top: 56px;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-section .hero_content-div .swipe-div {
+    margin-top: 110px;
+    display: flex;
+  }
 }
 .hero-section img {
   position: absolute;
   overflow: hidden;
-}
-.hero-section .heroPath-img {
-  width: 456.68px;
-  height: 582.58px;
-  z-index: 1;
-  margin-left: 176px;
-  top: -15.31px;
-}
-.hero-section .heroBg-img {
-  width: 287px;
-  height: 363.51px;
-  z-index: 2;
-  margin-left: 155px;
-  top: 448.77px;
-}
-.hero-section .heroGraphic-img {
-  width: 725px;
-  height: 515.56px;
-  z-index: 3;
-  margin-left: -217px;
-  top: 337px;
 }
 
 /* Fonts */
@@ -845,16 +1165,6 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   border-radius: 24px;
   transition: all ease-in-out 0.1s;
 }
-.job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG:hover {
-  background: #232340;
-  color: white;
-}
-.job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG:hover .parag-p {
-  color: #8B8B8B;
-}
-.job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG:hover img {
-  filter: brightness(0) invert(1);
-}
 .job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG .text {
   width: 187px;
   height: 64px;
@@ -881,6 +1191,32 @@ header .logo_burger .burger-div .bars:nth-child(2) {
   height: 14.22px;
   margin-top: 10.67px;
   margin-left: 40px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG .textNotification {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 226px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard .jobBG .textNotification .notification {
+  width: 24px;
+  height: 24px;
+  margin: 7px 0 0 15px;
+  align-self: center;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(2) {
+  width: 414px;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(2) .jobBG {
+  width: 414px;
+  background-image: url("../img/backgrounds/job/visual_designer.svg");
+  color: white;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(2) .jobBG .parag-p {
+  color: #8B8B8B;
+}
+.job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(2) .jobBG img {
+  filter: brightness(0) invert(1);
 }
 .job-article .weAreHiring-section .jobsContainer-div .jobCard:nth-child(1) .text {
   width: 187px;
@@ -1098,13 +1434,26 @@ body {
 main article {
   margin-top: 128px;
 }
+@media only screen and (min-width: 1025px) {
+  main article {
+    margin-top: 238px;
+  }
+}
 main article section {
   margin-left: 32px;
   display: flex;
   flex-direction: column;
 }
-main .hero-article {
-  height: 684px;
+@media only screen and (min-width: 768px) {
+  main article section {
+    margin-left: 107px;
+    margin-top: 169px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  main article section {
+    margin-left: 135px;
+  }
 }
 main .cta-article {
   height: 977px;

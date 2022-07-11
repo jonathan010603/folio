@@ -1,8 +1,8 @@
-const logo_burger_div = document.querySelector('.logo_burger');
+const header = document.querySelector('header');
 const burger = document.querySelector('.burger-div');
 const openMenu = document.querySelector('.mobile_open_menu-div');
 
 burger.onclick = () => {
-    logo_burger_div.classList.toggle('changeHeader');
+    header.classList.toggle('changeHeader');
     openMenu.classList.toggle('show');
 }
