@@ -46,6 +46,12 @@
                 color: $dark;
             }
 
+            .title_p {
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+
             p {
                 @include font_WeightSizeLineHeight (400, 16px, 28px);
                 @include sizeWH (228px, 84px);
@@ -138,12 +144,14 @@
 
                 .title_p {
                     @media only screen and (min-width: 768px) {
+                        @include font_WeightSizeLineHeight (700, 32px, 40px);
                         @include sizeWH (332px, 81px);
                         margin-top: 47px;
                         display: flex;
                     }
                     
                     @media only screen and (min-width: 1025px) {
+                        @include font_WeightSizeLineHeight (700, 40px, 48px);
                         @include sizeWH (467px, 96px);
                         margin-top: 24px;
                     }
@@ -177,12 +185,14 @@
             .arrow {
                 @media only screen and (min-width: 768px) {
                     position: absolute;
-                    top: 16%;
-                    left: 325%;
+                    top: 12%;
+                    left: 230%;
                 }
                 
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 1025px) {
                     @include sizeWH (64px, 64px);
+                    top: 17%;
+                    left: 326%;
                 }
             }
         }
@@ -432,7 +442,7 @@
                     margin-left: 483.98px;
                 }
                 
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 1025px) {
                     @include sizeWH (467px, 506px);
                     margin-left: 737px;
                 }
@@ -441,6 +451,9 @@
             .portfolioImg {
                 @include sizeWH (311px, 345px);
                 @media only screen and (min-width: 768px) {
+                    @include sizeWH (328px, 360px);
+                }
+                @media only screen and (min-width: 1025px) {
                     @include sizeWH (467px, 506px);
                 }
             }
@@ -496,8 +509,8 @@
                         @include sizeWH (260px, 84px);
                         position: absolute;
                         display: flex;
-                        top: 195%;
-                        left: 207.5%;
+                        top: 141%;
+                        left: 131%;
                     }
                     
                     @media only screen and (min-width: 1025px) {
@@ -552,6 +565,13 @@
 
             .portfolioImg {
                 @include sizeWH (366px, 325.33px);
+                @media only screen and (min-width: 768px) {
+                    @include sizeWH (260.27px, 360px);
+                }
+                
+                @media only screen and (min-width: 1025px) {
+                    @include sizeWH (366px, 506px);
+                }
             }
 
             .text-div {
@@ -626,7 +646,7 @@
                     left: 116%;
                 }
                 
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 1025px) {
                     @include sizeWH (64px, 64px);
                     top: 56%;
                     left: 181%;

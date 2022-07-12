@@ -1,5 +1,33 @@
 @import './_variables.scss';
 
+.logo {
+    z-index: 3;
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 27.09px;
+        left: 167.11px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        display: none;
+    }
+}
+
+.logoDesktop {
+    z-index: 3;
+    @media only screen and (max-width: 1024px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        margin-top: 75px;
+        left: 235px;
+    }
+}
+
 .cta-section {
     @include column_spaceBetween;
     margin-left: 0;
@@ -72,34 +100,6 @@
             margin-left: 131px;
             display: flex;
             justify-content: space-between;
-
-            .logo {
-                z-index: 3;
-                @media only screen and (max-width: 767px) {
-                    display: none;
-                }
-    
-                @media only screen and (min-width: 768px) {
-                    margin-top: 27.09px;
-                    left: 167.11px;
-                }
-
-                @media only screen and (min-width: 1025px) {
-                    display: none;
-                }
-            }
-
-            .logoDesktop {
-                z-index: 3;
-                @media only screen and (max-width: 1024px) {
-                    display: none;
-                }
-    
-                @media only screen and (min-width: 1025px) {
-                    margin-top: 75px;
-                    left: 235px;
-                }
-            }
         }
     }
 

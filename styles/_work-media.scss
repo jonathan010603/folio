@@ -11,6 +11,13 @@
     @media only screen and (min-width: 768px) {
         display: inherit;
     }
+    
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (700, 18px, 24px);
+        @include sizeWH (166px, 64px);
+        margin-left: 136px;
+        margin-top: 49px;
+    }
 }
 
 h1 {
@@ -25,10 +32,12 @@ h1 {
 @mixin container_div-media {
     @media only screen and (min-width: 768px) {
         @include sizeWH(821.04px, 243px);
+        margin-left: 107px;
     }
     
     @media only screen and (min-width: 1025px) {
         @include sizeWH(1170px, 252px);
+        margin-left: 135px;
     }
 }
 
@@ -36,14 +45,6 @@ h1 {
     @media only screen and (max-width: 767px) {
         @include sizeWH(311px, 238px);
         margin: 0;
-    }
-    
-    @media only screen and (min-width: 768px) {
-        margin-left: 107px;
-    }
-    
-    @media only screen and (min-width: 1025px) {
-        margin-left: 135px;
     }
 }
 

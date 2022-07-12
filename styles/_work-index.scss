@@ -19,9 +19,29 @@
     }
 
     .linesBG_Work {
+        width: 100vw;
+        min-width: 1024px;
+        min-height: 2439px;
         position: absolute;
-        background-size: cover;
         @media only screen and (max-width: 767px) {
+            display: none;
+        }
+        
+        @media only screen and (min-width: 1025px) {
+            display: none;
+        }
+    }
+
+    .linesBG_Desktop_Work {
+        width: 100vw;
+        min-width: 1440px;
+        min-height: 4237px;
+        max-width: 1440px;
+        max-height: 4237px;
+        top: 18%;
+        left: 3%;
+        position: absolute;
+        @media only screen and (max-width: 1024px) {
             display: none;
         }
     }
@@ -36,6 +56,10 @@
             @include text_n_buttons-media;
             @include sizeWH(821px, 243px);
             display: flex;
+
+            @media only screen and (min-width: 1025px) {
+                @include sizeWH(1170px, 252px);
+            }
 
             img {
                 @include sizeWH(24px, 24px);
@@ -95,10 +119,13 @@
                 @include title-media;
                 @include font_WeightSizeLineHeight (700, 40px, 48px);
                 @include sizeWH (255px, 96px);
-                margin: 0;
                 letter-spacing: -0.4px;
                 font-family: $display_bold;
                 color: $dark;
+
+                @media only screen and (min-width: 1025px) {
+                    margin-top: 63px;
+                }
             }
         }
 
@@ -108,21 +135,39 @@
             @include sizeWH (311px, 86px);
             font-family: $display_regular;
             text-align: left;
-            margin: 0;
+            margin-top: 15px;
             color: $body_light;
 
+            @media only screen and (min-width: 768px) {
+                @include sizeWH (329px, 84px);
+                margin-top: 10.71px;
+            }
+            
+            @media only screen and (min-width: 1025px) {
+                @include sizeWH (467px, 64px);
+                margin-top: 76px;
+            }
+
             .mobile-br {
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 767px) {
                     display: none;
                 }
                 display: inherit;
             }
 
-            .desktop-br {
-                @media only screen and (min-width: 768px) {
-                    display: inherit;
+            .tablet-br {
+                @media only screen and (max-width: 768px) {
+                    display: none;
                 }
-                display: none;
+                @media only screen and (min-width: 1025px) {
+                    display: none;
+                }
+            }
+            
+            .desktop-br {
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                }
             }
         }
     }
