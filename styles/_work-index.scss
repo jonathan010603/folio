@@ -5,23 +5,77 @@
 
 .work-article {
     @media only screen and (min-width: 768px) {
-        margin-top: 150px;
+        margin-top: 200px;
     }
 }
 
 .famousProjects-section {
     @include famousProjects_section-media;
     margin: 0;
-    height: 3484px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    @media only screen and (max-width: 767px) {
+        align-items: center;
+    }
+
+    .linesBG_Work {
+        position: absolute;
+        background-size: cover;
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
 
     .Container-div {
+        @include container_div-media;
         @include column_spaceBetween;
         @include sizeWH(311px, 238px);
+        z-index: 1;
+
+        .text_n_buttons {
+            @include text_n_buttons-media;
+            @include sizeWH(821px, 243px);
+            display: flex;
+
+            img {
+                @include sizeWH(24px, 24px);
+                display: none;
+                @media only screen and (min-width: 767px) {
+                    display: inherit;
+                }
+            }
+
+            button {
+                @include sizeWH(118.04px, 45.51px);
+                @include font_WeightSizeLineHeight (600, 16px, 22px);
+                display: none;
+                @media only screen and (min-width: 767px) {
+                    font-family: $display_bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                @media only screen and (min-width: 1025px) {
+                    @include sizeWH(166px, 64px);
+                    @include font_WeightSizeLineHeight (700, 18px, 24px);
+                }
+            }
+
+            .title_n_parag {
+                margin-left: 0;
+                @media only screen and (min-width: 768px) {
+                    margin-left: 107px;
+                }
+                
+                @media only screen and (min-width: 1025px) {
+                    margin-left: 176px;
+                }
+            }
+        }
 
         .indicator_title-div {
+            @include title_div-media;
             @include column_spaceBetween;
             @include sizeWH(255px, 139px);
             text-align: left;
@@ -31,6 +85,10 @@
                 @include pageIndicator;
                 width: 161px;
                 color: $primary;
+
+                @media only screen and (min-width: 1025px) {
+                    width: 184px;
+                }
             }
     
             .Title-h1 {
@@ -77,5 +135,9 @@
         color: white;
         border: none;
         border-radius: 8px;
+        text-align: center;
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
     }
 }

@@ -1,14 +1,13 @@
 .contactUsTablet-btn {
-    position: absolute;
     @include font_WeightSizeLineHeight (600, 16px, 22px);
     @include sizeWH (118.04px, 45.51px);
-    top: 200px;
-    right: 95.96px;
     background-color: $primary;
     color: white;
     border: none;
     border-radius: 8px;
     display: none;
+    margin-left: 77px;
+    margin-top: 61.6px;
     @media only screen and (min-width: 768px) {
         display: inherit;
     }
@@ -23,10 +22,50 @@ h1 {
     }
 }
 
+@mixin container_div-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH(821.04px, 243px);
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH(1170px, 252px);
+    }
+}
+
+@mixin text_n_buttons-media {
+    @media only screen and (max-width: 767px) {
+        @include sizeWH(311px, 238px);
+        margin: 0;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        margin-left: 107px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        margin-left: 135px;
+    }
+}
+
+@mixin title_div-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH(485px, 148.29px);
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH(668px, 100px);
+    }
+}
+
 @mixin title-media {
     @media only screen and (min-width: 768px) {
         @include font_WeightSizeLineHeight (700, 64px, 72px);
         @include sizeWH (485px, 72px);
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (700, 84px, 100.24px);
+        @include sizeWH (668px, 100px);
     }
 }
 
@@ -35,10 +74,35 @@ h1 {
         @include font_WeightSizeLineHeight (400, 16px, 28px);
         @include sizeWH (329px, 84px);
     }
+    
+    @media only screen and (min-width: 1025px) {
+        @include font_WeightSizeLineHeight (400, 18px, 32px);
+        @include sizeWH (467px, 64px);
+        margin-top: 40px;
+    }
 }
 
 @mixin famousProjects_section-media {
     @media only screen and (max-width: 375px) {
         margin-left: 32px;
+    }
+}
+
+
+@mixin  portfolios-media {
+    @media only screen and (min-width: 768px) {
+        @include sizeWH (911.47px, 2020.93px);
+        margin-left: 47.11px;
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH (1350px, 2752px);
+        margin-left: 55px;
+    }
+}
+
+@mixin portfolio1-media {
+    .portfolioImg {
+        @include sizeWH (470px, 370px);
     }
 }

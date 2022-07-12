@@ -21,6 +21,7 @@
     position: absolute;
     top: 0;
     left: 321px;
+    display: none;
 }
 
 .heroBG {
@@ -66,6 +67,7 @@
                 height: 168px;
                 letter-spacing: -0.5px;
                 margin-bottom: 24px;
+                clear: both;
             }
     
             .text-p {

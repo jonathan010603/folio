@@ -4,37 +4,130 @@
     @include column_spaceBetween;
     margin-left: 0;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 
     img {
         position: absolute;
         overflow: hidden;
     }
 
-    .bg {
-        @include sizeWH (342.91px, 977px);
+    .blue_pink-bg {
+        width: 90vw;
+        max-height: 961.33px;
+        right: 0;
         position: absolute;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-image: url('../img/backgrounds/work/cta/bg_cta.svg');
-        align-self: flex-end;
-        width: 100vw;
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .blue_pink_tablet-bg {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+        position: absolute;
+        left: 50px;
+        right: 50px;
+
+        @media only screen and (min-width: 1025px) {
+            display: none;
+        }
+    }
+
+    .blue_pink_desktop-bg {
+        @media only screen and (max-width: 1024px) {
+            display: none;
+        }
+        position: absolute;
+        left: 72px;
+        right: 72px;
     }
 
     .phoneBG {
         margin-top: 408px;
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .phone_tablet {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+        @media only screen and (min-width: 1025px) {
+            display: none;
+        }
+        margin-top: 0;
+        position: inherit;
+        z-index: 2;
+    }
+
+    .phone_n_container {
+        @media only screen and (min-width: 768px) {
+            @include sizeWH (663px, 401.98px);
+            margin-top: 81px;
+            margin-left: 131px;
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                z-index: 3;
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
+    
+                @media only screen and (min-width: 768px) {
+                    margin-top: 27.09px;
+                    left: 167.11px;
+                }
+
+                @media only screen and (min-width: 1025px) {
+                    display: none;
+                }
+            }
+
+            .logoDesktop {
+                z-index: 3;
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                }
+    
+                @media only screen and (min-width: 1025px) {
+                    margin-top: 75px;
+                    left: 235px;
+                }
+            }
+        }
     }
 
     .Container-div {
+        a {
+            z-index: 1;
+        }
+        @media only screen and (min-width: 768px) {
+            margin: 0;
+        }
+        @media only screen and (min-width: 1025px) {
+            margin-top: 64px;
+            margin-left: 602px;
+        }
         @include sizeWH (261px, 344px);
         @include column_spaceBetween;
-        z-index: 1;
-        margin-top: 64px;
+        margin-top: 134px;
         margin-left: 39.91px;
 
         .indicator_title-div {
+            z-index: 1;
             @include column_spaceBetween;
             @include sizeWH(261px, 269px);
             text-align: left;
+
+            @media only screen and (min-width: 1025px) {
+                @include sizeWH (367px, 336px);
+            }
 
             .pageIndicator-span {
                 @include row_spaceBetween;
@@ -42,6 +135,10 @@
                 font-family: $display_text;
                 width: 138px;
                 color: white;
+
+                @media only screen and (min-width: 1025px) {
+                    @include sizeWH (154px, 24px);
+                }
             }
     
             .Title-h3 {
@@ -51,6 +148,12 @@
                 letter-spacing: -0.5px;
                 font-family: $display_bold;
                 color: white;
+
+                @media only screen and (min-width: 1025px) {
+                    @include font_WeightSizeLineHeight (700, 64px, 72px);
+                    @include sizeWH (367px, 288px);
+                    margin-top: 24px;
+                }
             }
         }
 
@@ -63,6 +166,11 @@
             background-color: white;
             border-radius: 8px;
             cursor: pointer;
+
+            @media only screen and (min-width: 1025px) {
+                @include sizeWH (201px, 64px);
+                margin-top: 52px;
+            }
         }
     }
 }
