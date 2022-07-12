@@ -1,25 +1,50 @@
 @import './_variables.scss';
 @import './_services-achievement.scss';
 
+.services-article {
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    overflow: hidden;
+}
+
 .servicesBG {
     top: 0;
     position: absolute;
     background-image: url('../img/backgrounds/services/bg.svg');
     width: 100%;
     height: 1344px;
+    @media only screen and (min-width: 768px) {
+        height: 0px;
+    }
 }
 
 .whatWeDo-section {
     height: 1216px;
+    margin-left: 32px;
+    margin-top: 200px;
+    @media only screen and (min-width: 768px) {
+        margin-left: 96px;
+        height: 600px;
+    }
 
     .Container-div {
         @include column_spaceBetween;
         @include sizeWH (227px, 304px);
         z-index: 1;
 
+        @media only screen and (min-width: 768px) {
+            @include sizeWH (837.59px, 178px);
+        }
+
         .text-div {
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
             @include column_spaceBetween;
-            height: 234px;
+            height: 236px;
 
             .pageIndicator-span {
                 @include row_spaceBetween;
@@ -27,9 +52,9 @@
                 color: $primary;
             }
     
-            .Title-h4 {
+            .Title-h1 {
                 @include font_WeightSizeLineHeight (700, 40px, 48px);
-                @include sizeWH (227px, 192px);
+                @include sizeWH (227px, 193px);
                 margin: 0;
                 letter-spacing: -0.4px;
                 color: $dark;
@@ -42,8 +67,17 @@
             justify-content: right;
             margin-top: 24px;
 
+            @media only screen and (min-width: 768px) {
+                margin-top: 39.13px;
+                margin-left: 102.6px;
+            }
+
             img {
                 @include sizeWH (46px, 46px);
+
+                @media only screen and (min-width: 767px) {
+                    margin: 0;
+                }
             }
         }
     }
@@ -58,10 +92,20 @@
         text-align: left;
         color: $primary;
 
+        @media only screen and (min-width: 768px) {
+            @include sizeWH (821px, 415.29px);
+            flex-direction: row;
+            margin: 46px 0 0 0;
+        }
+
         .serviceContainer-div {
             @include sizeWH (311px, 214px);
             display: flex;
             align-items: flex-start;
+
+            @media only screen and (min-width: 768px) {
+                @include sizeWH (206px, 398.22px);
+            }
 
             .serviceBG-div {
                 @include sizeWH (311px, 190px);
@@ -69,6 +113,11 @@
                 background-color: white;
                 border-radius: 32px;
                 transition: all ease-in-out 0.1s;
+
+                @media only screen and (min-width: 768px) {
+                    @include sizeWH (206px, 398.22px);
+                    align-items: center;
+                }
 
                 &:hover {
                     background-color: $primary;
@@ -82,16 +131,114 @@
                     justify-content: left;
                     margin-left: 48px;
 
+                    @media only screen and (min-width: 768px) {
+                        @include sizeWH (128px, 144px);
+                        margin: 128px auto 126.22px auto;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
                     img {
                         @include sizeWH (91.02px, 91.02px);
                         margin-right: 24px;
+
+                        @media only screen and (min-width: 768px) {
+                            margin: 0;
+                        }
                     }
 
                     .serviceText-span {
                         height: 24px;
                         color: inherit;
+
+                        @media only screen and (min-width: 768px) {
+                            margin-top: 28.98px;;
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+.text_n_buttons {
+
+    display: flex;
+    @media only screen and (max-width: 767px) {
+        display: none;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        @include sizeWH(837.6px, 178px);
+    }
+
+    @media only screen and (min-width: 1025px) {
+        @include sizeWH(1170px, 252px);
+    }
+
+    img {
+        @include sizeWH(24px, 24px);
+        display: none;
+        @media only screen and (min-width: 767px) {
+            display: inherit;
+        }
+    }
+
+    .title_n_indicator {
+        display: flex;
+        margin-left: 0;
+        @media only screen and (min-width: 768px) {
+            margin-left: 128px;
+        }
+        
+        @media only screen and (min-width: 1025px) {
+            margin-left: 128px;
+        }
+    }
+
+    .indicator_title-div {
+        @media only screen and (min-width: 768px) {
+            @include sizeWH(475px, 178px);
+        }
+        
+        @media only screen and (min-width: 1025px) {
+            @include sizeWH(475px, 178px);
+        }
+        text-align: left;
+
+        .pageIndicator-span {
+            @include row_spaceBetween;
+            @include pageIndicator;
+            @include font_WeightSizeLineHeight (600, 16px, 22px);
+            color: $primary;
+
+            @media only screen and (min-width: 768px) {
+                width: 150px;
+            }
+
+            @media only screen and (min-width: 1025px) {
+                width: 150px;
+            }
+        }
+
+        .Title-h1 {
+            @media only screen and (min-width: 768px) {
+                @include font_WeightSizeLineHeight (700, 48px, 56px);
+                @include sizeWH (475px, 113px);
+                margin: 41px 0 0 0;
+            }
+            
+            @media only screen and (min-width: 1025px) {
+                @include font_WeightSizeLineHeight (700, 84px, 100.24px);
+                @include sizeWH (668px, 100px);
+            }
+            letter-spacing: -0.4px;
+            font-family: $display_bold;
+            color: $dark;
+
+            @media only screen and (min-width: 1025px) {
+                margin-top: 63px;
             }
         }
     }

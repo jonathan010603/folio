@@ -617,8 +617,24 @@ header .logoBox .burger-div .bars:nth-child(2) {
 /* Colors */
 /* General mixins */
 /* Flex mixins */
+@media only screen and (min-width: 768px) {
+  .achievements {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 100.44px;
+    margin-right: 95px;
+    margin-top: 130px;
+  }
+}
+
 .achievement-section {
   margin-top: 56px;
+}
+@media only screen and (min-width: 768px) {
+  .achievement-section {
+    margin-top: 100px;
+  }
 }
 .achievement-section .Container-div {
   width: 227px;
@@ -627,12 +643,24 @@ header .logoBox .burger-div .bars:nth-child(2) {
   flex-direction: column;
   justify-content: space-between;
 }
+@media only screen and (min-width: 768px) {
+  .achievement-section .Container-div {
+    width: 398px;
+    height: 399px;
+  }
+}
 .achievement-section .Container-div .text-div {
   width: 227px;
   height: 188px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .achievement-section .Container-div .text-div {
+    width: 568px;
+    height: 177px;
+  }
 }
 .achievement-section .Container-div .text-div .pageIndicator-span {
   display: flex;
@@ -647,6 +675,21 @@ header .logoBox .burger-div .bars:nth-child(2) {
   width: 156px;
   height: 24px;
   color: #5468E7;
+}
+@media only screen and (min-width: 768px) {
+  .achievement-section .Container-div .text-div .pageIndicator-span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.achievement-section .Container-div .text-div .pageIndicator-span .logo_achievements {
+  margin-right: 75px;
+}
+@media only screen and (max-width: 767px) {
+  .achievement-section .Container-div .text-div .pageIndicator-span .logo_achievements {
+    display: none;
+  }
 }
 .achievement-section .Container-div .text-div .pageIndicator-span .pageNum {
   width: 27px;
@@ -666,6 +709,20 @@ header .logoBox .burger-div .bars:nth-child(2) {
   letter-spacing: -0.2px;
   color: #232340;
 }
+@media only screen and (min-width: 768px) {
+  .achievement-section .Container-div .text-div .Title-h6 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    width: 398px;
+    height: 64px;
+    margin: 20px 0 0 0;
+    letter-spacing: -0.5px;
+  }
+  .achievement-section .Container-div .text-div .Title-h6 br {
+    display: none;
+  }
+}
 .achievement-section .Container-div .successfulProjects-div {
   width: 194px;
   height: 191px;
@@ -673,6 +730,12 @@ header .logoBox .burger-div .bars:nth-child(2) {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .achievement-section .Container-div .successfulProjects-div {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }
 .achievement-section .Container-div .successfulProjects-div .number-span {
   font-weight: 600;
@@ -736,6 +799,17 @@ header .logoBox .burger-div .bars:nth-child(2) {
   background-image: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%);
 }
 
+.services-article {
+  overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  .services-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .servicesBG {
   top: 0;
   position: absolute;
@@ -743,9 +817,22 @@ header .logoBox .burger-div .bars:nth-child(2) {
   width: 100%;
   height: 1344px;
 }
+@media only screen and (min-width: 768px) {
+  .servicesBG {
+    height: 0px;
+  }
+}
 
 .whatWeDo-section {
   height: 1216px;
+  margin-left: 32px;
+  margin-top: 200px;
+}
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section {
+    margin-left: 96px;
+    height: 600px;
+  }
 }
 .whatWeDo-section .Container-div {
   display: flex;
@@ -755,11 +842,22 @@ header .logoBox .burger-div .bars:nth-child(2) {
   height: 304px;
   z-index: 1;
 }
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .Container-div {
+    width: 837.59px;
+    height: 178px;
+  }
+}
 .whatWeDo-section .Container-div .text-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 234px;
+  height: 236px;
+}
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .Container-div .text-div {
+    display: none;
+  }
 }
 .whatWeDo-section .Container-div .text-div .pageIndicator-span {
   display: flex;
@@ -773,12 +871,12 @@ header .logoBox .burger-div .bars:nth-child(2) {
   height: 18px;
   color: #5468E7;
 }
-.whatWeDo-section .Container-div .text-div .Title-h4 {
+.whatWeDo-section .Container-div .text-div .Title-h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   width: 227px;
-  height: 192px;
+  height: 193px;
   margin: 0;
   letter-spacing: -0.4px;
   color: #232340;
@@ -790,9 +888,20 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: right;
   margin-top: 24px;
 }
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .Container-div .arrow-span {
+    margin-top: 39.13px;
+    margin-left: 102.6px;
+  }
+}
 .whatWeDo-section .Container-div .arrow-span img {
   width: 46px;
   height: 46px;
+}
+@media only screen and (min-width: 767px) {
+  .whatWeDo-section .Container-div .arrow-span img {
+    margin: 0;
+  }
 }
 .whatWeDo-section .serviceCard-div {
   font-weight: 600;
@@ -807,11 +916,25 @@ header .logoBox .burger-div .bars:nth-child(2) {
   text-align: left;
   color: #5468E7;
 }
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div {
+    width: 821px;
+    height: 415.29px;
+    flex-direction: row;
+    margin: 46px 0 0 0;
+  }
+}
 .whatWeDo-section .serviceCard-div .serviceContainer-div {
   width: 311px;
   height: 214px;
   display: flex;
   align-items: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div .serviceContainer-div {
+    width: 206px;
+    height: 398.22px;
+  }
 }
 .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div {
   width: 311px;
@@ -822,6 +945,13 @@ header .logoBox .burger-div .bars:nth-child(2) {
   background-color: white;
   border-radius: 32px;
   transition: all ease-in-out 0.1s;
+}
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div {
+    width: 206px;
+    height: 398.22px;
+    align-items: center;
+  }
 }
 .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div:hover {
   background-color: #5468E7;
@@ -837,14 +967,148 @@ header .logoBox .burger-div .bars:nth-child(2) {
   justify-content: left;
   margin-left: 48px;
 }
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div {
+    width: 128px;
+    height: 144px;
+    margin: 128px auto 126.22px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
   width: 91.02px;
   height: 91.02px;
   margin-right: 24px;
 }
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div img {
+    margin: 0;
+  }
+}
 .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
   height: 24px;
   color: inherit;
+}
+@media only screen and (min-width: 768px) {
+  .whatWeDo-section .serviceCard-div .serviceContainer-div .serviceBG-div .service-div .serviceText-span {
+    margin-top: 28.98px;
+  }
+}
+
+.text_n_buttons {
+  display: flex;
+}
+@media only screen and (max-width: 767px) {
+  .text_n_buttons {
+    display: none;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .text_n_buttons {
+    width: 837.6px;
+    height: 178px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons {
+    width: 1170px;
+    height: 252px;
+  }
+}
+.text_n_buttons img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+@media only screen and (min-width: 767px) {
+  .text_n_buttons img {
+    display: inherit;
+  }
+}
+.text_n_buttons .title_n_indicator {
+  display: flex;
+  margin-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .text_n_buttons .title_n_indicator {
+    margin-left: 128px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons .title_n_indicator {
+    margin-left: 128px;
+  }
+}
+.text_n_buttons .indicator_title-div {
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .text_n_buttons .indicator_title-div {
+    width: 475px;
+    height: 178px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons .indicator_title-div {
+    width: 475px;
+    height: 178px;
+  }
+}
+.text_n_buttons .indicator_title-div .pageIndicator-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SF Pro Text";
+  width: 131px;
+  height: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5468E7;
+}
+@media only screen and (min-width: 768px) {
+  .text_n_buttons .indicator_title-div .pageIndicator-span {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons .indicator_title-div .pageIndicator-span {
+    width: 150px;
+  }
+}
+.text_n_buttons .indicator_title-div .Title-h1 {
+  letter-spacing: -0.4px;
+  font-family: "SF Pro Display";
+  color: #232340;
+}
+@media only screen and (min-width: 768px) {
+  .text_n_buttons .indicator_title-div .Title-h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    width: 475px;
+    height: 113px;
+    margin: 41px 0 0 0;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons .indicator_title-div .Title-h1 {
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 100.24px;
+    width: 668px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .text_n_buttons .indicator_title-div .Title-h1 {
+    margin-top: 63px;
+  }
 }
 
 /* Fonts */
@@ -2639,9 +2903,6 @@ main article section {
   main article section {
     margin-left: 174.8px;
   }
-}
-main .services-article {
-  height: 1691px;
 }
 main .footer-article {
   height: 977px;

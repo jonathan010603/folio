@@ -1,21 +1,52 @@
 @import './_variables.scss';
 
+.achievements {
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-left: 100.44px;
+        margin-right: 95px;
+        margin-top: 130px;
+    }
+}
+
 .achievement-section {
     margin-top: 56px;
+    @media only screen and (min-width: 768px) {
+        margin-top: 100px;
+    }
 
     .Container-div {
         @include sizeWH (227px, 399px);
         @include column_spaceBetween;
 
+        @media only screen and (min-width: 768px) {
+            @include sizeWH (398px, 399px);
+        }
+
         .text-div {
             @include sizeWH (227px, 188px);
             @include column_spaceBetween;
+            @media only screen and (min-width: 768px) {
+                @include sizeWH (568px, 177px);
+            }
 
             .pageIndicator-span {
                 @include row_spaceBetween;
                 @include pageIndicator;
                 @include sizeWH (156px, 24px);
                 color: $primary;
+                @media only screen and (min-width: 768px) {
+                    @include font_WeightSizeLineHeight (600, 16px, 22px);
+                }
+
+                .logo_achievements {
+                    @media only screen and (max-width: 767px) {
+                        display: none;
+                    }
+                    margin-right: 75px
+                }
 
                 .pageNum {
                     @include sizeWH (27px, 24px);
@@ -32,6 +63,17 @@
                 left: 32px;
                 letter-spacing: -0.2px;
                 color: $dark;
+
+                @media only screen and (min-width: 768px) {
+                    @include font_WeightSizeLineHeight (700, 24px, 32px);
+                    @include sizeWH (398px, 64px);
+                    margin: 20px 0 0 0 ;
+                    letter-spacing: -0.5px;
+
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -39,6 +81,11 @@
             @include sizeWH (194px, 191px);
             @include column_spaceBetween;
             margin-top: 32px;
+
+            @media only screen and (min-width: 768px) {
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
 
             .number-span {
                 @include font_WeightSizeLineHeight (600, 140px, 167px);
