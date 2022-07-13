@@ -1,0 +1,20 @@
+.logo-div {
+    @include flex();
+
+    @media (max-width: 1024px) {
+        .logo_text-img {
+            margin-left: 12.8px;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .logo_symbol-img {
+            @include size(40px, 40px);
+        }
+
+        .logo_text-img {
+            @include size(83px, 29.84px);
+            margin-left: 16px;
+        }
+    }
+}

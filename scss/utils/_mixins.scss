@@ -10,8 +10,9 @@
     align-items: $align;
 }
 
-@mixin font($family: inherit, $size: inherit, $weight: inherit) {
+@mixin font($family: inherit, $size: inherit, $weight: inherit, $lineHeight: inherit) {
     font-family: $family;
     font-size: $size;
+    line-height: $lineHeight;
     font-weight: $weight;
 }

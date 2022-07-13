@@ -1,0 +1,12 @@
+.burger-div {
+    @include size(32px, 12px);
+    @include flex(column);
+    
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    .bars-img {
+        transition: all ease-in-out 0.2s;
+    }
+}
