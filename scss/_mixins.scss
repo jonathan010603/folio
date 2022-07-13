@@ -1,0 +1,17 @@
+@mixin size($x: inherit, $y: inherit) {
+    width: $x;
+    height: $y;
+}
+
+@mixin flex($dir: row, $just: space-between, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin font($family: inherit, $size: inherit, $weight: inherit) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}

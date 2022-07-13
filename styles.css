@@ -1,0 +1,93 @@
+header {
+  width: 100vw;
+  height: inherit;
+  box-sizing: border-box;
+  min-width: 320px;
+}
+@media screen and (max-width: 767px) {
+  header {
+    width: inherit;
+    height: 128px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    width: inherit;
+    height: 56px;
+    margin-top: 39.51px;
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  header {
+    width: inherit;
+    height: 64px;
+    margin-top: 64px;
+    padding: 0 72px;
+  }
+}
+header .mobile-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  header .mobile-nav {
+    display: none;
+  }
+}
+header .mobile-nav .burger-div {
+  width: 32px;
+  height: 12px;
+}
+header .mobile-nav .burger-div .bars-img {
+  transition: all ease-in-out 0.2s;
+  position: absolute;
+}
+header .mobile-nav .burger-div .bars-img:nth-child(2) {
+  margin-top: 8px;
+}
+header .mobile-nav .logo-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .mobile-nav .logo-div .logo_text-img {
+  margin-left: 12.8px;
+}
+
+.large-nav {
+  display: none;
+}
+
+/*
+
+.changeHeader {
+    position: fixed;
+
+    .logoTxt {
+        filter: brightness(0) invert(1);
+    }
+
+    .bars {
+        filter: brightness(0) invert(1);
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 5.5px);              
+        }
+
+        &:nth-child(2) {
+            transform: rotate(-45deg) translate(0px, -5.5px);   
+        }
+    }
+}
+
+*/
+body, html {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=styles.css.map */

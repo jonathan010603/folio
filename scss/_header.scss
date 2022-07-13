@@ -1,0 +1,78 @@
+header {
+    @include size($x: 100vw);
+    box-sizing: border-box;
+    min-width: 320px;
+
+    @media screen and (max-width: 767px) {
+        @include size($y: 128px);
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: 768px) {
+        @include size($y: 56px);
+        margin-top: 39.51px;
+        padding: 0 50px;
+    }
+    
+    @media screen and (min-width: 1025px) {
+        @include size($y: 64px);
+        margin-top: 64px;
+        padding: 0 72px;
+    }
+
+    .mobile-nav {
+        @include size(100%, 100%);
+        @include flex();
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        .burger-div {
+            @include size(32px, 12px);
+            
+            .bars-img {
+                transition: all ease-in-out 0.2s;
+                position: absolute;
+                &:nth-child(2) {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .logo-div {
+            @include flex();
+
+            .logo_text-img {
+                margin-left: 12.8px;
+            }
+        }
+    }
+}
+
+.large-nav {
+    display: none;
+}
+
+/*
+
+.changeHeader {
+    position: fixed;
+
+    .logoTxt {
+        filter: brightness(0) invert(1);
+    }
+        
+    .bars {
+        filter: brightness(0) invert(1);
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 5.5px);              
+        }
+                
+        &:nth-child(2) {
+            transform: rotate(-45deg) translate(0px, -5.5px);   
+        }
+    }
+}
+
+*/
