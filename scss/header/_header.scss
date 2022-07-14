@@ -5,7 +5,7 @@ header {
     @include size($x: 100vw);
     transition: all ease-in-out 0.2s;
     box-sizing: border-box;
-    min-width: 320px;
+    min-width: 335px;
 
     @media (max-width: 767px) {
         @include size($y: 128px);

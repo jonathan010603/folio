@@ -1,0 +1,92 @@
+.content-div {
+    @include flex(column, $align: left);
+
+    @media (max-width: 767px) {
+        height: 356px;
+        padding: 0 32px
+    }
+    
+    @media (min-width: 768px) {
+        padding: 0 0 0 107px
+    }
+    
+    @media (min-width: 1025px) {
+        padding: 0 0 0 135px
+    }
+
+    .title-h1 {
+        min-width: 204px;
+        letter-spacing: -0.5px;
+        margin: 0;
+
+        @media (max-width: 499px) {
+            @include font($size: 48px, $lineHeight: 56px, $weight: 700);
+            max-width: 204px;
+        }
+
+        @media (min-width: 500px) {
+            @include font($size: 56px, $lineHeight: 64px, $weight: 700);
+            max-width: 235.5px;
+        }
+        
+        @media (min-width: 768px) {
+            @include font($size: 64px, $lineHeight: 72px, $weight: 700);
+            max-width: 267px;
+        }
+        
+        @media (min-width: 1025px) {
+            @include font($size: 84px, $lineHeight: 100px, $weight: 700);
+            letter-spacing: -1px;
+            max-width: 347px;
+        }
+    }
+
+    .text-p {
+        @include font($size: 16px, $lineHeight: 28px, $weight: 400);
+        letter-spacing: -0.5px;
+        margin: 0;
+
+        @media (max-width: 499px) {
+            width: 236px;
+        }
+
+        @media (min-width: 500px) {
+            @include font($size: 17px, $lineHeight: 30px, $weight: 400);
+            width: 252px;
+        }
+        
+        @media (min-width: 768px) {
+        }
+        
+        @media (min-width: 1025px) {
+            @include font($size: 18px, $lineHeight: 32px, $weight: 400);
+            max-width: 330px;
+        }
+    }
+
+    .recent-btn {
+        border-radius: 8px;
+        background-color: $primary;
+        border-color: transparent;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $dark;
+        }
+
+        @media (max-width: 767px) {
+            @include size(146px, 56px);
+        }
+            
+        @media (min-width: 768px) {
+            @include size(17.3122%, 56px);
+            @include font($size: 16px, $lineHeight: 22px, $weight: 600);
+        }
+            
+        @media (min-width: 1025px) {
+            @include size(13.8888%, 64px);
+            @include font($size: 18px, $lineHeight: 24px, $weight: 800);
+        }
+    }
+}
